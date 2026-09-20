@@ -698,5 +698,305 @@
     "audio": "assets/070.mp3",
     "startTime": 0,
     "volume": 0.15
+  },
+  {
+    "id": "071",
+    "title": "エヌ",
+    "artist": "全てあなたの所為です。",
+    "youtubeId": "FzYyDPS4cEU",
+    "cover": "assets/071.jpg",
+    "audio": "assets/071.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "072",
+    "title": "ダンスロボットダンス",
+    "artist": "ナユタン星人",
+    "youtubeId": "g7dvpD_zlIM",
+    "cover": "assets/072.jpg",
+    "audio": "assets/072.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "073",
+    "title": "Twilight",
+    "artist": "E.L.O.",
+    "youtubeId": "pJQyGbv0oZ8",
+    "cover": "assets/073.jpg",
+    "audio": "assets/073.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "074",
+    "title": "時よ",
+    "artist": "星野源",
+    "youtubeId": "LGG8grKZhxY",
+    "cover": "assets/074.jpg",
+    "audio": "assets/074.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "075",
+    "title": "GOTCHA！",
+    "artist": "BUMP OF CHICKEN",
+    "youtubeId": "BoZ0Zwab6Oc",
+    "cover": "assets/075.jpg",
+    "audio": "assets/075.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "076",
+    "title": "ことばのおばけがまどからみている",
+    "artist": "フロクロ",
+    "youtubeId": "YBgzkksLURU",
+    "cover": "assets/076.jpg",
+    "audio": "assets/076.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "077",
+    "title": "現実という名の怪物と戦う者たち",
+    "artist": "高橋優",
+    "youtubeId": "ldrbn9E50WM",
+    "cover": "assets/077.jpg",
+    "audio": "assets/077.mp3",
+    "startTime": 0,
+    "volume": 0.6
+  },
+  {
+    "id": "078",
+    "title": "異星に行こうね",
+    "artist": "いよわ",
+    "youtubeId": "PubukElqUJw",
+    "cover": "assets/078.jpg",
+    "audio": "assets/078.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "079",
+    "title": "Around the World",
+    "artist": "MONKEY MAJIK",
+    "youtubeId": "1RnBDQJyQdI",
+    "cover": "assets/079.jpg",
+    "audio": "assets/079.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "080",
+    "title": "Who?",
+    "artist": "Azari",
+    "youtubeId": "8JXiXt0D6tw",
+    "cover": "assets/080.jpg",
+    "audio": "assets/080.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "081",
+    "title": "ヰ世界の宝石譚",
+    "artist": "sasakure.uk",
+    "youtubeId": "hcqXjcO791s",
+    "cover": "assets/081.jpg",
+    "audio": "assets/081.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "082",
+    "title": "イガク",
+    "artist": "原口沙輔",
+    "youtubeId": "F38EuG2dAyM",
+    "cover": "assets/082.jpg",
+    "audio": "assets/082.mp3",
+    "startTime": 0,
+    "volume": 0.12
+  },
+  {
+    "id": "083",
+    "title": "LEGAL-HIGH",
+    "artist": "林ゆうき",
+    "youtubeId": "Q6vxiWJVics",
+    "cover": "assets/083.jpg",
+    "audio": "assets/083.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "084",
+    "title": "≣",
+    "artist": "全てみんなの所為です。(ネジマキ)",
+    "youtubeId": "C4kfzGc_TyU",
+    "cover": "assets/084.jpg",
+    "audio": "assets/084.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "085",
+    "title": "ハリボテ",
+    "artist": "なみぐる",
+    "youtubeId": "-x4BRRGXPeU",
+    "cover": "assets/085.jpg",
+    "audio": "assets/085.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "086",
+    "title": "予言屋さん",
+    "artist": "島",
+    "youtubeId": "cmAUNchuBIM",
+    "cover": "assets/086.jpg",
+    "audio": "assets/086.mp3",
+    "startTime": 0,
+    "volume": 0.3
+  },
+  {
+    "id": "087",
+    "title": "塊オンザドリーム",
+    "artist": "Shogo Nomura",
+    "youtubeId": "eRFy1u39cik",
+    "cover": "assets/087.jpg",
+    "audio": "assets/087.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "088",
+    "title": "伊っ達さ",
+    "artist": "マキシウキョウ",
+    "youtubeId": "cRGp-LyGo1w",
+    "cover": "assets/088.jpg",
+    "audio": "assets/088.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "089",
+    "title": "EVERLASTING",
+    "artist": "本田未央, 辻野あかり, 双葉杏, 木村夏樹, アナスタシア, ナターリア, 橘ありす, 輿水幸子, 依田芳乃, 川島瑞樹",
+    "youtubeId": "3QRpRxi1nuI",
+    "cover": "assets/089.jpg",
+    "audio": "assets/089.mp3",
+    "startTime": 0,
+    "volume": 0.45
+  },
+  {
+    "id": "090",
+    "title": "こんな毎日だってうたになる",
+    "artist": "ダイナミック自演ズ",
+    "youtubeId": "JOGCNmyiW6A",
+    "cover": "assets/090.jpg",
+    "audio": "assets/090.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "091",
+    "title": "愚図",
+    "artist": "isonosuke",
+    "youtubeId": "6PvEiz6MfEE",
+    "cover": "assets/091.jpg",
+    "audio": "assets/091.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "092",
+    "title": "メニメニマニマニ",
+    "artist": "高宮なすの",
+    "youtubeId": "0bxpd_QxTYc",
+    "cover": "assets/092.jpg",
+    "audio": "assets/092.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "093",
+    "title": "Zzz",
+    "artist": "佐咲紗花",
+    "youtubeId": "BnC-cpUCdns",
+    "cover": "assets/093.jpg",
+    "audio": "assets/093.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "094",
+    "title": "猫になって現実逃避でもするか。",
+    "artist": "にほしか",
+    "youtubeId": "P3H7N34rPZE",
+    "cover": "assets/094.jpg",
+    "audio": "assets/094.mp3",
+    "startTime": 0,
+    "volume": 0.3
+  },
+  {
+    "id": "095",
+    "title": "鵺子踊",
+    "artist": "ネジマキ",
+    "youtubeId": "e0lVOWgSkSE",
+    "cover": "assets/095.jpg",
+    "audio": "assets/095.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "096",
+    "title": "さんさーら！",
+    "artist": "田中秀和, ARuFa",
+    "youtubeId": "Kl0ieRnAHnE",
+    "cover": "assets/096.jpg",
+    "audio": "assets/096.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "097",
+    "title": "Yona Yona Journey",
+    "artist": "TAKU INOUE,  星街すいせい",
+    "youtubeId": "YO1V9fn7zYo",
+    "cover": "assets/097.jpg",
+    "audio": "assets/097.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "098",
+    "title": "とべない深海魚",
+    "artist": "電ǂ鯨",
+    "youtubeId": "ERZd7MtbdN0",
+    "cover": "assets/098.jpg",
+    "audio": "assets/098.mp3",
+    "startTime": 0,
+    "volume": 0.3
+  },
+  {
+    "id": "099",
+    "title": "みいつけた！さんでぃ",
+    "artist": "内田 慈",
+    "youtubeId": "uzhpRHAcVWE",
+    "cover": "assets/099.jpg",
+    "audio": "assets/099.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "100",
+    "title": "晦ます雲",
+    "artist": "しー汰",
+    "youtubeId": "CU9DUlvyZJ8",
+    "cover": "assets/100.jpg",
+    "audio": "assets/100.mp3",
+    "startTime": 0,
+    "volume": 0.2
   }
 ]

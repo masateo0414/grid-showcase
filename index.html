@@ -179,7 +179,7 @@
 
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(var(--grid-cols, 16), 1fr);
+      grid-template-columns: repeat(var(--grid-cols, 10), 1fr);
       gap: 4px;
       width: 100%;
     }
@@ -451,6 +451,7 @@
         <div class="sliders-container">
           <div class="slider-row">
             <label for="zoom-slider">SIZE</label>
+            <!-- min:4(最も小さい表示=列数16), max:16(最も大きい表示=列数4) -->
             <input type="range" id="zoom-slider" min="4" max="16" value="10">
           </div>
           <div class="slider-row">
@@ -486,6 +487,7 @@
     let currentIndex = -1;
     let currentAudio = null;
     let isShuffle = false;
+    let playedIndices = []; // シャッフル再生の重複防止用履歴
 
     // 音量設定（初期値は0.8倍 = 80%）
     let globalVolume = localStorage.getItem('app_volume') !== null 
@@ -514,6 +516,14 @@
     // スライダーのグラデーション初期化
     updateSliderBackground(zoomSlider);
     updateSliderBackground(volumeSlider);
+
+    // ズームスライダー値からグリッド列数を算出（右にいくほど列数が減り画像が大きくなる）
+    function applyGridSize(sliderValue) {
+      const min = parseInt(zoomSlider.min, 10);
+      const max = parseInt(zoomSlider.max, 10);
+      const cols = (min + max) - parseInt(sliderValue, 10);
+      gridEl.style.setProperty('--grid-cols', cols);
+    }
 
     // 1. tracks.json の読み込み
     async function loadTracks() {
@@ -562,6 +572,11 @@
       
       currentIndex = index;
       const track = tracks[index];
+
+      // 再生履歴に追加（重複防止用）
+      if (!playedIndices.includes(index)) {
+        playedIndices.push(index);
+      }
 
       document.querySelectorAll('.track-card').forEach((c, idx) => {
         c.classList.toggle('active', idx === index);
@@ -625,15 +640,33 @@
       });
     }
 
-    // 4. 次の曲へ移行
+    // 4. 次の曲へ移行（重複制御付きシャッフル対応）
     function playNextTrack() {
       if (tracks.length === 0) return;
 
       let nextIndex;
       if (isShuffle && tracks.length > 1) {
-        do {
-          nextIndex = Math.floor(Math.random() * tracks.length);
-        } while (nextIndex === currentIndex);
+        // 未再生のインデックスリストを作成
+        let unplayed = [];
+        for (let i = 0; i < tracks.length; i++) {
+          if (!playedIndices.includes(i)) {
+            unplayed.push(i);
+          }
+        }
+
+        // すべて再生済みの場合は履歴をリセット（現在の曲だけ残す）
+        if (unplayed.length === 0) {
+          playedIndices = [currentIndex];
+          for (let i = 0; i < tracks.length; i++) {
+            if (i !== currentIndex) {
+              unplayed.push(i);
+            }
+          }
+        }
+
+        // 未再生の候補からランダムに1曲選択
+        const randomIndex = Math.floor(Math.random() * unplayed.length);
+        nextIndex = unplayed[randomIndex];
       } else {
         nextIndex = (currentIndex + 1) % tracks.length;
       }
@@ -658,10 +691,9 @@
     // 音量スライダー操作時
     volumeSlider.addEventListener('input', (e) => {
       globalVolume = parseFloat(e.target.value) / 100;
-      localStorage.setItem('app_volume', globalVolume); // 保存
+      localStorage.setItem('app_volume', globalVolume);
       updateSliderBackground(e.target);
 
-      // 再生中の曲の音量を変更（最大2.0まで可）
       if (currentAudio && currentIndex !== -1) {
         const track = tracks[currentIndex];
         const trackRelativeVol = track.volume !== undefined ? track.volume : 1.0;
@@ -669,10 +701,9 @@
       }
     });
 
-    // ズームスライダー操作時
+    // ズームスライダー操作時（右にスライドすると画像が大きくなる）
     zoomSlider.addEventListener('input', (e) => {
-      const cols = e.target.value;
-      gridEl.style.setProperty('--grid-cols', cols);
+      applyGridSize(e.target.value);
       updateSliderBackground(e.target);
     });
 
@@ -689,25 +720,40 @@
       deselectTrack();
     });
 
+    // ダイス（ランダム単発再生）ボタン
     randomBtn.addEventListener('click', () => {
       if (tracks.length === 0) return;
       
-      let randomIndex;
-      if (tracks.length > 1) {
-        do {
-          randomIndex = Math.floor(Math.random() * tracks.length);
-        } while (randomIndex === currentIndex);
-      } else {
-        randomIndex = 0;
+      let unplayed = [];
+      for (let i = 0; i < tracks.length; i++) {
+        if (!playedIndices.includes(i)) {
+          unplayed.push(i);
+        }
       }
-      
-      selectTrack(randomIndex);
+
+      if (unplayed.length === 0) {
+        playedIndices = currentIndex !== -1 ? [currentIndex] : [];
+        for (let i = 0; i < tracks.length; i++) {
+          if (i !== currentIndex) {
+            unplayed.push(i);
+          }
+        }
+      }
+
+      const randomIndex = Math.floor(Math.random() * unplayed.length);
+      selectTrack(unplayed[randomIndex]);
     });
 
+    // シャッフルON/OFF切替ボタン
     shuffleToggleBtn.addEventListener('click', () => {
       isShuffle = !isShuffle;
       shuffleToggleBtn.classList.toggle('active', isShuffle);
       shuffleToggleBtn.textContent = isShuffle ? '🔀 ON' : '🔀 OFF';
+
+      // シャッフルONにした時、現在の曲だけを履歴に残してリセット
+      if (isShuffle) {
+        playedIndices = currentIndex !== -1 ? [currentIndex] : [];
+      }
     });
 
     function escapeHtml(str) {
@@ -716,7 +762,8 @@
       }[m])) : '';
     }
 
-    gridEl.style.setProperty('--grid-cols', zoomSlider.value);
+    // 初期グリッドサイズの指定
+    applyGridSize(zoomSlider.value);
     loadTracks();
   </script>
 </body>
