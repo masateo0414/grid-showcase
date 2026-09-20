@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Music Grid Showcase</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "LINE Seed JP", sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .app-container {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* メインエリア（コントロールバー＋グリッド） */
+    .main-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* 上部コントロールバー */
+    .control-bar {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      background-color: #181818;
+      border-bottom: 1px solid #282828;
+      gap: 16px;
+      flex-wrap: nowrap;
+      min-height: 57px;
+    }
+
+    /* 中央：サイトタイトル */
+    .app-title {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .control-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.85rem;
+      color: #b3b3b3;
+    }
+
+    .control-group input[type="range"] {
+      cursor: pointer;
+      width: 120px;
+    }
+
+    /* ボタン類 */
+    .btn {
+      background-color: #282828;
+      color: #fff;
+      border: 1px solid #3e3e3e;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: bold;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn:hover {
+      background-color: #3e3e3e;
+      transform: scale(1.03);
+    }
+
+    .btn.active {
+      background-color: #1db954;
+      border-color: #1db954;
+      color: #000;
+    }
+
+    /* 左側：グリッドコンテナ */
+    .grid-wrapper {
+      flex: 1;
+      padding: 12px;
+      overflow-y: auto;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(var(--grid-cols, 16), 1fr);
+      gap: 4px;
+      width: 100%;
+    }
+
+    .grid-footer {
+      text-align: center;
+      padding: 40px 0 20px; 
+      color: #6a6a6a;      
+      font-size: 0.85rem;
+      letter-spacing: 0.12em; 
+      user-select: none;
+      text-transform: uppercase;
+    }
+
+    .track-card {
+      aspect-ratio: 1 / 1;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      background-color: #282828;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      user-select: none;
+    }
+
+    .track-card:hover {
+      transform: scale(1.12);
+      z-index: 5;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+    }
+
+    .track-card.active {
+      outline: 3px solid #1db954;
+      z-index: 10;
+    }
+
+    .track-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* 右側：詳細・HTML5プレイヤーパネル（共通・PC基本） */
+    .detail-panel {
+      width: 320px;
+      background-color: #181818;
+      border-left: 1px solid #282828;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-shrink: 0;
+      overflow: hidden; 
+    }
+
+    .detail-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: slideInRight 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .detail-info-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .detail-number {
+      width: 100%; 
+      font-size: 4.5rem;
+      font-weight: 600;
+      color: #808080;
+      letter-spacing: -0.05em;
+      margin-bottom: 12px;
+      text-align: left; 
+      line-height: 1;
+    }
+
+    .detail-cover {
+      width: 200px;
+      height: 200px;
+      border-radius: 12px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      background-color: #282828;
+    }
+
+    .detail-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 6px;
+      word-break: break-word;
+    }
+
+    .detail-artist {
+      font-size: 0.95rem;
+      color: #b3b3b3;
+      margin-bottom: 20px;
+    }
+
+    audio {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    .yt-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 10px 16px;
+      background-color: #ff0000;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .yt-button:hover {
+      background-color: #cc0000;
+      transform: scale(1.02);
+    }
+
+    .placeholder-text {
+      color: #717171;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* ==========================================
+       PC向け（画面幅769px以上）：番号を最上部へ配置
+       ========================================== */
+    @media (min-width: 769px) {
+      .detail-content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* 番号を一番上（order: -1）へ強制移動 */
+      .detail-number {
+        order: -1;
+      }
+
+      .detail-cover {
+        order: 0;
+      }
+
+      .detail-info-group {
+        display: contents; /* ラッパーを解除してPC用縦並び順を維持 */
+      }
+    }
+
+    /* ==========================================
+       スマホ・タブレット向け（画面幅768px以下）
+       ========================================== */
+    @media (max-width: 768px) {
+      body {
+        overflow-y: auto;
+        height: auto;
+      }
+
+      .app-container {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+      }
+
+      .main-area {
+        height: auto;
+        overflow: visible;
+      }
+
+      .control-bar {
+        flex-wrap: wrap;
+        padding: 10px 14px;
+        gap: 10px;
+        min-height: auto;
+      }
+
+      .app-title {
+        position: static;
+        transform: none;
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        order: -1;
+      }
+
+      .control-group input[type="range"] {
+        width: 80px;
+      }
+
+      .detail-panel {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid #282828;
+        padding: 16px;
+        min-height: auto;
+      }
+
+      /* 横並びレイアウト（左：ジャケット、右：情報群） */
+      .detail-content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .detail-cover {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+        border-radius: 8px;
+      }
+
+      .detail-info-group {
+        align-items: flex-start;
+        flex: 1;
+        min-width: 0;
+      }
+
+      .detail-number {
+        font-size: 1.6rem;
+        margin-bottom: 2px;
+        text-align: left;
+      }
+
+      .detail-title {
+        font-size: 1rem;
+        margin-bottom: 2px;
+        text-align: left;
+      }
+
+      .detail-artist {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+        text-align: left;
+      }
+
+      audio {
+        margin-bottom: 8px;
+        height: 32px;
+      }
+
+      .yt-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- メインエリア（上部操作バー ＋ グリッド） -->
+    <div class="main-area">
+      <div class="control-bar">
+        <!-- 左：スライダー -->
+        <div class="control-group">
+          <label for="zoom-slider">SIZE</label>
+          <input type="range" id="zoom-slider" min="4" max="16" value="10">
+          <span id="zoom-label">10</span>
+        </div>
+
+        <!-- 中央：サイトタイトル -->
+        <h1 class="app-title">EGOISTIC GRID SHOWCASE</h1>
+
+        <!-- 右：操作ボタン -->
+        <div class="control-group">
+          <button class="btn" id="random-btn">🎲</button>
+          <button class="btn" id="shuffle-toggle-btn">🔀 OFF</button>
+        </div>
+      </div>
+
+      <div class="grid-wrapper" id="grid-wrapper">
+        <div class="grid-container" id="grid"></div>
+        <div class="grid-footer">
+          More tracks coming soon
+        </div>
+      </div>
+    </div>
+
+    <!-- 詳細パネル -->
+    <div class="detail-panel" id="detail-panel">
+      <p class="placeholder-text">NO TRACK</p>
+    </div>
+  </div>
+
+  <script>
+    let tracks = [];
+    let currentIndex = -1;
+    let currentAudio = null;
+    let isShuffle = false;
+
+    const gridEl = document.getElementById('grid');
+    const detailPanelEl = document.getElementById('detail-panel');
+    const zoomSlider = document.getElementById('zoom-slider');
+    const zoomLabel = document.getElementById('zoom-label');
+    const randomBtn = document.getElementById('random-btn');
+    const shuffleToggleBtn = document.getElementById('shuffle-toggle-btn');
+
+    // 1. tracks.json の読み込み
+    async function loadTracks() {
+      try {
+        const response = await fetch('tracks.json');
+        tracks = await response.json();
+        renderGrid();
+      } catch (error) {
+        console.error('tracks.json の読み込みに失敗しました:', error);
+        detailPanelEl.innerHTML = `<p style="color:red;">tracks.json の読み込みエラー</p>`;
+      }
+    }
+
+    // 2. グリッドの描写
+    function renderGrid() {
+      gridEl.innerHTML = '';
+      tracks.forEach((track, index) => {
+        const card = document.createElement('div');
+        card.className = 'track-card';
+        card.dataset.index = index;
+
+        const img = document.createElement('img');
+        img.src = track.cover;
+        img.alt = track.title;
+        img.loading = "lazy";
+
+        card.appendChild(img);
+
+        card.addEventListener('click', (e) => {
+          e.stopPropagation();
+          selectTrack(index);
+        });
+
+        gridEl.appendChild(card);
+      });
+    }
+
+    // 3. 曲選択・再生処理
+    function selectTrack(index) {
+      if (index < 0 || index >= tracks.length) return;
+
+      if (currentIndex === index) {
+        deselectTrack();
+        return;
+      }
+      
+      currentIndex = index;
+      const track = tracks[index];
+
+      // ハイライト切り替え
+      document.querySelectorAll('.track-card').forEach((c, idx) => {
+        c.classList.toggle('active', idx === index);
+      });
+
+      if (currentAudio) {
+        currentAudio.pause();
+      }
+
+      const ytUrl = track.youtubeId 
+        ? `https://www.youtube.com/watch?v=${track.youtubeId}` 
+        : (track.url || '#');
+
+      const trackNum = String(track.id || index + 1).padStart(3, '0');
+
+      detailPanelEl.innerHTML = `
+        <div class="detail-content">
+          <img class="detail-cover" src="${track.cover}" alt="${escapeHtml(track.title)}">
+          <div class="detail-info-group">
+            <div class="detail-number">${trackNum}</div>
+            <div class="detail-title">${escapeHtml(track.title)}</div>
+            <div class="detail-artist">${escapeHtml(track.artist)}</div>
+            <audio id="audio-player" controls controlsList="nodownload" oncontextmenu="return false;" src="${track.audio}"></audio>
+            <a class="yt-button" id="yt-link" href="${ytUrl}" target="_blank" rel="noopener noreferrer">
+              YouTube
+            </a>
+          </div>
+        </div>
+      `;
+
+      const player = document.getElementById('audio-player');
+      const ytLink = document.getElementById('yt-link');
+      currentAudio = player;
+
+      if (window.innerWidth <= 768) {
+        detailPanelEl.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      if (ytLink) {
+        ytLink.addEventListener('click', () => {
+          if (currentAudio) {
+            currentAudio.pause();
+          }
+        });
+      }
+
+      const startTime = track.startTime || 0;
+      const trackVolume = track.volume !== undefined ? track.volume : 0.15;
+
+      player.addEventListener('loadedmetadata', () => {
+        player.volume = trackVolume;
+        player.currentTime = startTime;
+        player.play().catch(e => console.log('自動再生ブロック:', e));
+      });
+
+      player.addEventListener('ended', () => {
+        playNextTrack();
+      });
+    }
+
+    // 4. 次の曲へ移行する処理
+    function playNextTrack() {
+      if (tracks.length === 0) return;
+
+      let nextIndex;
+      if (isShuffle) {
+        nextIndex = Math.floor(Math.random() * tracks.length);
+      } else {
+        nextIndex = (currentIndex + 1) % tracks.length;
+      }
+      selectTrack(nextIndex);
+    }
+
+    // 5. 選択解除＆停止処理
+    function deselectTrack() {
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio = null;
+      }
+      currentIndex = -1;
+      document.querySelectorAll('.track-card').forEach(c => c.classList.remove('active'));
+      detailPanelEl.innerHTML = `
+        <p class="placeholder-text">NO TRACK</p>
+      `;
+    }
+
+    // イベントリスナー
+    document.addEventListener('click', (e) => {
+      if (
+        e.target.closest('.track-card') || 
+        e.target.closest('.control-bar') || 
+        e.target.closest('audio') || 
+        e.target.closest('.yt-button') ||
+        e.target.closest('.detail-panel')
+      ) {
+        return;
+      }
+      deselectTrack();
+    });
+
+    zoomSlider.addEventListener('input', (e) => {
+      const cols = e.target.value;
+      gridEl.style.setProperty('--grid-cols', cols);
+      zoomLabel.textContent = `${cols}`;
+    });
+
+    randomBtn.addEventListener('click', () => {
+      if (tracks.length === 0) return;
+      const randomIndex = Math.floor(Math.random() * tracks.length);
+      selectTrack(randomIndex);
+    });
+
+    shuffleToggleBtn.addEventListener('click', () => {
+      isShuffle = !isShuffle;
+      shuffleToggleBtn.classList.toggle('active', isShuffle);
+      shuffleToggleBtn.textContent = isShuffle ? '🔀 ON' : '🔀 OFF';
+    });
+
+    function escapeHtml(str) {
+      return str ? str.replace(/[&<>"']/g, m => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+      }[m])) : '';
+    }
+
+    gridEl.style.setProperty('--grid-cols', zoomSlider.value);
+    loadTracks();
+  </script>
+</body>
+</html>
