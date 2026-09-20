@@ -127,7 +127,7 @@
     "cover": "assets/013.jpg",
     "audio": "assets/013.mp3",
     "startTime": 0,
-    "volume": 0.15
+    "volume": 0.12
   },
   {
     "id": "014",
@@ -137,7 +137,7 @@
     "cover": "assets/014.jpg",
     "audio": "assets/014.mp3",
     "startTime": 0,
-    "volume": 0.2
+    "volume": 0.15
   },
   {
     "id": "015",
@@ -157,7 +157,7 @@
     "cover": "assets/016.jpg",
     "audio": "assets/016.mp3",
     "startTime": 0,
-    "volume": 0.15
+    "volume": 0.1
   },
   {
     "id": "017",
@@ -347,7 +347,7 @@
     "cover": "assets/035.jpg",
     "audio": "assets/035.mp3",
     "startTime": 0,
-    "volume": 0.25
+    "volume": 0.2
   },
   {
     "id": "036",
@@ -417,7 +417,7 @@
     "cover": "assets/042.jpg",
     "audio": "assets/042.mp3",
     "startTime": 0,
-    "volume": 0.2
+    "volume": 0.15
   },
   {
     "id": "043",
@@ -727,7 +727,7 @@
     "cover": "assets/073.jpg",
     "audio": "assets/073.mp3",
     "startTime": 0,
-    "volume": 0.15
+    "volume": 0.2
   },
   {
     "id": "074",
@@ -857,7 +857,7 @@
     "cover": "assets/086.jpg",
     "audio": "assets/086.mp3",
     "startTime": 0,
-    "volume": 0.3
+    "volume": 0.25
   },
   {
     "id": "087",
@@ -917,7 +917,7 @@
     "cover": "assets/092.jpg",
     "audio": "assets/092.mp3",
     "startTime": 0,
-    "volume": 0.2
+    "volume": 0.15
   },
   {
     "id": "093",
