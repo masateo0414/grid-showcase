@@ -127,7 +127,7 @@
     "cover": "assets/013.jpg",
     "audio": "assets/013.mp3",
     "startTime": 0,
-    "volume": 0.12
+    "volume": 0.14
   },
   {
     "id": "014",
@@ -217,7 +217,7 @@
     "cover": "assets/022.jpg",
     "audio": "assets/022.mp3",
     "startTime": 0,
-    "volume": 0.15
+    "volume": 0.12
   },
   {
     "id": "023",
@@ -271,7 +271,7 @@
   },
   {
     "id": "028",
-    "title": "Paradise has No Border",
+    "title": "Paradise Has No Border",
     "artist": "東京スカパラダイスオーケストラ",
     "youtubeId": "iG3gVwOr1PI",
     "cover": "assets/028.jpg",
@@ -317,7 +317,7 @@
     "cover": "assets/032.jpg",
     "audio": "assets/032.mp3",
     "startTime": 0,
-    "volume": 0.15
+    "volume": 0.18
   },
   {
     "id": "033",
@@ -502,7 +502,7 @@
   {
     "id": "051",
     "title": "ゲーム・ボーイ・アワー",
-    "artist": "社築",
+    "artist": "じん, 社築",
     "youtubeId": "IpAIsmRDZd4",
     "cover": "assets/051.jpg",
     "audio": "assets/051.mp3",
@@ -962,7 +962,7 @@
   {
     "id": "097",
     "title": "Yona Yona Journey",
-    "artist": "TAKU INOUE,  星街すいせい",
+    "artist": "TAKU INOUE, 森カリオペ",
     "youtubeId": "YO1V9fn7zYo",
     "cover": "assets/097.jpg",
     "audio": "assets/097.mp3",
