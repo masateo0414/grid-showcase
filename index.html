@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Local Music Grid Showcase</title>
+  <title>Egoistic Grid Showcase</title>
   <style>
     * {
       box-sizing: border-box;
@@ -548,8 +548,11 @@
       if (tracks.length === 0) return;
 
       let nextIndex;
-      if (isShuffle) {
-        nextIndex = Math.floor(Math.random() * tracks.length);
+      if (isShuffle && tracks.length > 1) {
+        // 現在の曲と異なるインデックスが選ばれるまでループ
+        do {
+          nextIndex = Math.floor(Math.random() * tracks.length);
+        } while (nextIndex === currentIndex);
       } else {
         nextIndex = (currentIndex + 1) % tracks.length;
       }
@@ -591,7 +594,16 @@
 
     randomBtn.addEventListener('click', () => {
       if (tracks.length === 0) return;
-      const randomIndex = Math.floor(Math.random() * tracks.length);
+      
+      let randomIndex;
+      if (tracks.length > 1) {
+        do {
+          randomIndex = Math.floor(Math.random() * tracks.length);
+        } while (randomIndex === currentIndex);
+      } else {
+        randomIndex = 0;
+      }
+      
       selectTrack(randomIndex);
     });
 
