@@ -27,7 +27,6 @@
       height: 100vh;
     }
 
-    /* メインエリア（コントロールバー＋グリッド） */
     .main-area {
       flex: 1;
       display: flex;
@@ -42,15 +41,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 20px;
+      padding: 10px 20px;
       background-color: #181818;
       border-bottom: 1px solid #282828;
       gap: 16px;
       flex-wrap: nowrap;
-      min-height: 57px;
+      min-height: 64px;
     }
 
-    /* 中央：サイトタイトル */
     .app-title {
       position: absolute;
       left: 50%;
@@ -72,12 +70,81 @@
       color: #b3b3b3;
     }
 
-    .control-group input[type="range"] {
-      cursor: pointer;
-      width: 120px;
+    /* 左側：スライダー群を縦に並べるコンテナ */
+    .sliders-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
-    /* ボタン類 */
+    .slider-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      color: #b3b3b3;
+    }
+
+    .slider-row label {
+      width: 32px;
+      text-align: right;
+      letter-spacing: 0.05em;
+    }
+
+    /* --- カスタムスライダーのスタイル --- */
+    .slider-row input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100px;
+      height: 5px;
+      background: #3e3e3e;
+      border-radius: 3px;
+      outline: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    /* ホバー時にトラックの色を少し明るく */
+    .slider-row input[type="range"]:hover {
+      background: #4e4e4e;
+    }
+
+    /* つまみ（Thumb）のカスタマイズ: Chrome/Safari/Edge */
+    .slider-row input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #1db954;
+      box-shadow: 0 0 6px rgba(0,0,0,0.5);
+      cursor: pointer;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    .slider-row input[type="range"]::-webkit-slider-thumb:hover {
+      transform: scale(1.25);
+      background: #1ed760;
+    }
+
+    /* つまみ（Thumb）のカスタマイズ: Firefox */
+    .slider-row input[type="range"]::-moz-range-thumb {
+      width: 12px;
+      height: 12px;
+      border: none;
+      border-radius: 50%;
+      background: #1db954;
+      box-shadow: 0 0 6px rgba(0,0,0,0.5);
+      cursor: pointer;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    .slider-row input[type="range"]::-moz-range-thumb:hover {
+      transform: scale(1.25);
+      background: #1ed760;
+    }
+
     .btn {
       background-color: #282828;
       color: #fff;
@@ -104,7 +171,6 @@
       color: #000;
     }
 
-    /* 左側：グリッドコンテナ */
     .grid-wrapper {
       flex: 1;
       padding: 12px;
@@ -156,7 +222,6 @@
       display: block;
     }
 
-    /* 右側：詳細・HTML5プレイヤーパネル（共通・PC基本） */
     .detail-panel {
       width: 320px;
       background-color: #181818;
@@ -263,16 +328,12 @@
       line-height: 1.6;
     }
 
-    /* ==========================================
-       PC向け（画面幅769px以上）：番号を最上部へ配置
-       ========================================== */
     @media (min-width: 769px) {
       .detail-content {
         display: flex;
         flex-direction: column;
       }
 
-      /* 番号を一番上（order: -1）へ強制移動 */
       .detail-number {
         order: -1;
       }
@@ -282,13 +343,10 @@
       }
 
       .detail-info-group {
-        display: contents; /* ラッパーを解除してPC用縦並び順を維持 */
+        display: contents;
       }
     }
 
-    /* ==========================================
-       スマホ・タブレット向け（画面幅768px以下）
-       ========================================== */
     @media (max-width: 768px) {
       body {
         overflow-y: auto;
@@ -322,7 +380,7 @@
         order: -1;
       }
 
-      .control-group input[type="range"] {
+      .slider-row input[type="range"] {
         width: 80px;
       }
 
@@ -334,7 +392,6 @@
         min-height: auto;
       }
 
-      /* 横並びレイアウト（左：ジャケット、右：情報群） */
       .detail-content {
         flex-direction: row;
         align-items: flex-start;
@@ -388,20 +445,23 @@
 <body>
 
   <div class="app-container">
-    <!-- メインエリア（上部操作バー ＋ グリッド） -->
     <div class="main-area">
       <div class="control-bar">
-        <!-- 左：スライダー -->
-        <div class="control-group">
-          <label for="zoom-slider">SIZE</label>
-          <input type="range" id="zoom-slider" min="4" max="16" value="10">
-          <span id="zoom-label">10</span>
+        <!-- 左側：縦並びのスライダーエリア -->
+        <div class="sliders-container">
+          <div class="slider-row">
+            <label for="zoom-slider">SIZE</label>
+            <input type="range" id="zoom-slider" min="4" max="16" value="10">
+          </div>
+          <div class="slider-row">
+            <label for="volume-slider">VOL</label>
+            <input type="range" id="volume-slider" min="0" max="200" value="80">
+          </div>
         </div>
 
-        <!-- 中央：サイトタイトル -->
         <h1 class="app-title">EGOISTIC GRID SHOWCASE</h1>
 
-        <!-- 右：操作ボタン -->
+        <!-- 右側：ボタンエリア -->
         <div class="control-group">
           <button class="btn" id="random-btn">🎲</button>
           <button class="btn" id="shuffle-toggle-btn">🔀 OFF</button>
@@ -416,7 +476,6 @@
       </div>
     </div>
 
-    <!-- 詳細パネル -->
     <div class="detail-panel" id="detail-panel">
       <p class="placeholder-text">NO TRACK</p>
     </div>
@@ -428,12 +487,33 @@
     let currentAudio = null;
     let isShuffle = false;
 
+    // 音量設定（初期値は0.8倍 = 80%）
+    let globalVolume = localStorage.getItem('app_volume') !== null 
+      ? parseFloat(localStorage.getItem('app_volume')) 
+      : 0.8;
+
     const gridEl = document.getElementById('grid');
     const detailPanelEl = document.getElementById('detail-panel');
     const zoomSlider = document.getElementById('zoom-slider');
-    const zoomLabel = document.getElementById('zoom-label');
+    const volumeSlider = document.getElementById('volume-slider');
     const randomBtn = document.getElementById('random-btn');
     const shuffleToggleBtn = document.getElementById('shuffle-toggle-btn');
+
+    // 初期音量スライダーの値を設定 (0〜200)
+    volumeSlider.value = Math.round(globalVolume * 100);
+
+    // スライダー背景の塗りつぶし更新関数
+    function updateSliderBackground(slider) {
+      const min = parseFloat(slider.min) || 0;
+      const max = parseFloat(slider.max) || 100;
+      const val = parseFloat(slider.value);
+      const percentage = ((val - min) / (max - min)) * 100;
+      slider.style.background = `linear-gradient(to right, #1db954 0%, #1db954 ${percentage}%, #3e3e3e ${percentage}%, #3e3e3e 100%)`;
+    }
+
+    // スライダーのグラデーション初期化
+    updateSliderBackground(zoomSlider);
+    updateSliderBackground(volumeSlider);
 
     // 1. tracks.json の読み込み
     async function loadTracks() {
@@ -483,7 +563,6 @@
       currentIndex = index;
       const track = tracks[index];
 
-      // ハイライト切り替え
       document.querySelectorAll('.track-card').forEach((c, idx) => {
         c.classList.toggle('active', idx === index);
       });
@@ -530,10 +609,13 @@
       }
 
       const startTime = track.startTime || 0;
-      const trackVolume = track.volume !== undefined ? track.volume : 0.15;
+      
+      // 個別音量 × マスター音量（最大2.0まで許容）
+      const trackRelativeVol = track.volume !== undefined ? track.volume : 1.0;
+      const finalVolume = Math.min(2.0, trackRelativeVol * globalVolume);
 
       player.addEventListener('loadedmetadata', () => {
-        player.volume = trackVolume;
+        player.volume = finalVolume;
         player.currentTime = startTime;
         player.play().catch(e => console.log('自動再生ブロック:', e));
       });
@@ -543,13 +625,12 @@
       });
     }
 
-    // 4. 次の曲へ移行する処理
+    // 4. 次の曲へ移行
     function playNextTrack() {
       if (tracks.length === 0) return;
 
       let nextIndex;
       if (isShuffle && tracks.length > 1) {
-        // 現在の曲と異なるインデックスが選ばれるまでループ
         do {
           nextIndex = Math.floor(Math.random() * tracks.length);
         } while (nextIndex === currentIndex);
@@ -572,7 +653,29 @@
       `;
     }
 
-    // イベントリスナー
+    // --- イベントリスナー ---
+
+    // 音量スライダー操作時
+    volumeSlider.addEventListener('input', (e) => {
+      globalVolume = parseFloat(e.target.value) / 100;
+      localStorage.setItem('app_volume', globalVolume); // 保存
+      updateSliderBackground(e.target);
+
+      // 再生中の曲の音量を変更（最大2.0まで可）
+      if (currentAudio && currentIndex !== -1) {
+        const track = tracks[currentIndex];
+        const trackRelativeVol = track.volume !== undefined ? track.volume : 1.0;
+        currentAudio.volume = Math.min(2.0, trackRelativeVol * globalVolume);
+      }
+    });
+
+    // ズームスライダー操作時
+    zoomSlider.addEventListener('input', (e) => {
+      const cols = e.target.value;
+      gridEl.style.setProperty('--grid-cols', cols);
+      updateSliderBackground(e.target);
+    });
+
     document.addEventListener('click', (e) => {
       if (
         e.target.closest('.track-card') || 
@@ -584,12 +687,6 @@
         return;
       }
       deselectTrack();
-    });
-
-    zoomSlider.addEventListener('input', (e) => {
-      const cols = e.target.value;
-      gridEl.style.setProperty('--grid-cols', cols);
-      zoomLabel.textContent = `${cols}`;
     });
 
     randomBtn.addEventListener('click', () => {

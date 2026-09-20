@@ -77,7 +77,7 @@
     "cover": "assets/008.jpg",
     "audio": "assets/008.mp3",
     "startTime": 0,
-    "volume": 0.25
+    "volume": 0.2
   },
   {
     "id": "009",
@@ -87,7 +87,7 @@
     "cover": "assets/009.jpg",
     "audio": "assets/009.mp3",
     "startTime": 0,
-    "volume": 0.15
+    "volume": 0.2
   },
   {
     "id": "010",
@@ -137,7 +137,7 @@
     "cover": "assets/014.jpg",
     "audio": "assets/014.mp3",
     "startTime": 0,
-    "volume": 0.25
+    "volume": 0.2
   },
   {
     "id": "015",
@@ -237,7 +237,7 @@
     "cover": "assets/024.jpg",
     "audio": "assets/024.mp3",
     "startTime": 0,
-    "volume": 0.15
+    "volume": 0.2
   },
   {
     "id": "025",
@@ -417,7 +417,7 @@
     "cover": "assets/042.jpg",
     "audio": "assets/042.mp3",
     "startTime": 0,
-    "volume": 0.15
+    "volume": 0.2
   },
   {
     "id": "043",
@@ -498,5 +498,205 @@
     "audio": "assets/050.mp3",
     "startTime": 0,
     "volume": 0.2
+  },
+  {
+    "id": "051",
+    "title": "ゲーム・ボーイ・アワー",
+    "artist": "社築",
+    "youtubeId": "IpAIsmRDZd4",
+    "cover": "assets/051.jpg",
+    "audio": "assets/051.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "052",
+    "title": "enchanted love",
+    "artist": "linear ring",
+    "youtubeId": "qE6mruRB1PA",
+    "cover": "assets/052.jpg",
+    "audio": "assets/052.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "053",
+    "title": "THE WORLD REVOLVING",
+    "artist": "DELTARUNE",
+    "youtubeId": "St7iqIzml18",
+    "cover": "assets/053.jpg",
+    "audio": "assets/053.mp3",
+    "startTime": 0,
+    "volume": 0.25
+  },
+  {
+    "id": "054",
+    "title": "アイソトープ",
+    "artist": "r-906",
+    "youtubeId": "l7eJQdjyDYI",
+    "cover": "assets/054.jpg",
+    "audio": "assets/054.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "055",
+    "title": "ラペペペ",
+    "artist": "Inagi",
+    "youtubeId": "E-0SH_ciC8Q",
+    "cover": "assets/055.jpg",
+    "audio": "assets/055.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "056",
+    "title": "太陽ポカポカで草",
+    "artist": "なみぐる",
+    "youtubeId": "1g1lXfgH_XI",
+    "cover": "assets/056.jpg",
+    "audio": "assets/056.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "057",
+    "title": "REGIKOSTAR～レジ子スターの刺激～",
+    "artist": "KAN",
+    "youtubeId": "xI5pg-O364w",
+    "cover": "assets/057.jpg",
+    "audio": "assets/057.mp3",
+    "startTime": 0,
+    "volume": 0.12
+  },
+  {
+    "id": "058",
+    "title": "ボクノート",
+    "artist": "スキマスイッチ",
+    "youtubeId": "AeMRXJtg500",
+    "cover": "assets/058.jpg",
+    "audio": "assets/058.mp3",
+    "startTime": 0,
+    "volume": 0.25
+  },
+  {
+    "id": "059",
+    "title": "ソウソウ",
+    "artist": "ナターリア(デレステ)",
+    "youtubeId": "2VmXMOyuAoA",
+    "cover": "assets/059.jpg",
+    "audio": "assets/059.mp3",
+    "startTime": 0,
+    "volume": 0.4
+  },
+  {
+    "id": "060",
+    "title": "不革命前夜",
+    "artist": "NEE",
+    "youtubeId": "Dm2O_W6Rrss",
+    "cover": "assets/060.jpg",
+    "audio": "assets/060.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "061",
+    "title": "(猿夢の歌)",
+    "artist": "x0o0x",
+    "youtubeId": "y2isEHCCnng",
+    "cover": "assets/061.jpg",
+    "audio": "assets/061.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "062",
+    "title": "Double Time (Tumble)",
+    "artist": "Minecraft: Battle & Tumble",
+    "youtubeId": "-AL6YpjhcUo",
+    "cover": "assets/062.jpg",
+    "audio": "assets/062.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "063",
+    "title": "奇想天外ふしぎをどうぞ",
+    "artist": "野田愛実",
+    "youtubeId": "PDECWKyclEA",
+    "cover": "assets/063.jpg",
+    "audio": "assets/063.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "064",
+    "title": "さよならコスモノート",
+    "artist": "ああああ茶漬け",
+    "youtubeId": "JcEv1qZKQL0",
+    "cover": "assets/064.jpg",
+    "audio": "assets/064.mp3",
+    "startTime": 0,
+    "volume": 0.25
+  },
+  {
+    "id": "065",
+    "title": "茶道＊DANCE SPACE",
+    "artist": "雨穴",
+    "youtubeId": "hbqV3xSvJQQ",
+    "cover": "assets/065.jpg",
+    "audio": "assets/065.mp3",
+    "startTime": 0,
+    "volume": 0.45
+  },
+  {
+    "id": "066",
+    "title": "青は止まれ",
+    "artist": "なみぐる, Aohada",
+    "youtubeId": "ZhynJZGwIHk",
+    "cover": "assets/066.jpg",
+    "audio": "assets/066.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "067",
+    "title": "モノノフ王国",
+    "artist": "スーパーペーパーマリオ",
+    "youtubeId": "gVqSkkawjl4",
+    "cover": "assets/067.jpg",
+    "audio": "assets/067.mp3",
+    "startTime": 0,
+    "volume": 0.35
+  },
+  {
+    "id": "068",
+    "title": "ありふれたせかいせいふく",
+    "artist": "ピノキオピー",
+    "youtubeId": "8Z3TbMBfDM0",
+    "cover": "assets/068.jpg",
+    "audio": "assets/068.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "069",
+    "title": "人生は夢だらけ",
+    "artist": "椎名林檎",
+    "youtubeId": "GDnLHd2Ei3Y",
+    "cover": "assets/069.jpg",
+    "audio": "assets/069.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "070",
+    "title": "極楽浄土",
+    "artist": "speder2",
+    "youtubeId": "v83IHyS0UBY",
+    "cover": "assets/070.jpg",
+    "audio": "assets/070.mp3",
+    "startTime": 0,
+    "volume": 0.15
   }
 ]
