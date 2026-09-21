@@ -1292,7 +1292,7 @@
   {
     "id": "130",
     "title": "SH4PESHIFT3R",
-    "artist": "Isonosuke",
+    "artist": "isonosuke",
     "youtubeId": "_mlJk5cWlAo",
     "cover": "assets/130.jpg",
     "audio": "assets/130.mp3",
@@ -1417,7 +1417,7 @@
     "cover": "assets/142.jpg",
     "audio": "assets/142.mp3",
     "startTime": 0,
-    "volume": 0.2
+    "volume": 0.25
   },
   {
     "id": "143",
@@ -1427,12 +1427,12 @@
     "cover": "assets/143.jpg",
     "audio": "assets/143.mp3",
     "startTime": 0,
-    "volume": 0.15
+    "volume": 0.2
   },
   {
     "id": "144",
     "title": "怪盗Rのテーマ",
-    "artist": "リズム怪盗R",
+    "artist": "リズム怪盗R 皇帝ナポレオンの遺産",
     "youtubeId": "6RW-ZCfBr6k",
     "cover": "assets/144.jpg",
     "audio": "assets/144.mp3",
@@ -1487,7 +1487,7 @@
     "cover": "assets/149.jpg",
     "audio": "assets/149.mp3",
     "startTime": 0,
-    "volume": 0.15
+    "volume": 0.2
   },
   {
     "id": "150",
