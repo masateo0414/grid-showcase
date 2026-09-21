@@ -167,7 +167,7 @@
     "cover": "assets/017.jpg",
     "audio": "assets/017.mp3",
     "startTime": 0,
-    "volume": 0.15
+    "volume": 0.2
   },
   {
     "id": "018",
@@ -202,7 +202,7 @@
   {
     "id": "021",
     "title": "金の斧、銀の斧、エメラルドの斧",
-    "artist": "花海佑芽",
+    "artist": "花海佑芽(初星学園)",
     "youtubeId": "YbyjjPC6wUQ",
     "cover": "assets/021.jpg",
     "audio": "assets/021.mp3",
@@ -317,7 +317,7 @@
     "cover": "assets/032.jpg",
     "audio": "assets/032.mp3",
     "startTime": 0,
-    "volume": 0.18
+    "volume": 0.2
   },
   {
     "id": "033",
@@ -582,7 +582,7 @@
   {
     "id": "059",
     "title": "ソウソウ",
-    "artist": "ナターリア(デレステ)",
+    "artist": "ナターリア",
     "youtubeId": "2VmXMOyuAoA",
     "cover": "assets/059.jpg",
     "audio": "assets/059.mp3",
@@ -998,5 +998,505 @@
     "audio": "assets/100.mp3",
     "startTime": 0,
     "volume": 0.2
+  },
+  {
+    "id": "101",
+    "title": "イワシがつちからはえてくるんだ",
+    "artist": "ころんば",
+    "youtubeId": "d_T1StgldnM",
+    "cover": "assets/101.jpg",
+    "audio": "assets/101.mp3",
+    "startTime": 0,
+    "volume": 0.25
+  },
+  {
+    "id": "102",
+    "title": "SUSHI食べたい",
+    "artist": "ORANGE RANGE",
+    "youtubeId": "epfPe2U_2Xk",
+    "cover": "assets/102.jpg",
+    "audio": "assets/102.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "103",
+    "title": "ショック！",
+    "artist": "サカナクション",
+    "youtubeId": "rEw1AVeuSjg",
+    "cover": "assets/103.jpg",
+    "audio": "assets/103.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "104",
+    "title": "はじまりのうた",
+    "artist": "全てみんなの所為です。",
+    "youtubeId": "5k7_9cOwL5A",
+    "cover": "assets/104.jpg",
+    "audio": "assets/104.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "105",
+    "title": "超解像の破壊活動",
+    "artist": "フロクロ",
+    "youtubeId": "X5NhQ--8qu8",
+    "cover": "assets/105.jpg",
+    "audio": "assets/105.mp3",
+    "startTime": 0,
+    "volume": 0.18
+  },
+  {
+    "id": "106",
+    "title": "Hi-Fi-Story",
+    "artist": "打打だいず",
+    "youtubeId": "ghUo3DHs53Q",
+    "cover": "assets/106.jpg",
+    "audio": "assets/106.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "107",
+    "title": "まにまに",
+    "artist": "r-906",
+    "youtubeId": "9O2VyUM5MlQ",
+    "cover": "assets/107.jpg",
+    "audio": "assets/107.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "108",
+    "title": "Hello Song",
+    "artist": "星野源",
+    "youtubeId": "bUnfuRew3PU",
+    "cover": "assets/108.jpg",
+    "audio": "assets/108.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "109",
+    "title": "Love or Lie",
+    "artist": "雄之助",
+    "youtubeId": "6vzYvyBj2y0",
+    "cover": "assets/109.jpg",
+    "audio": "assets/109.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "110",
+    "title": "Rainy Capsule Paraphrase",
+    "artist": "井荷麻奈実",
+    "youtubeId": "nihO54eVnvE",
+    "cover": "assets/110.jpg",
+    "audio": "assets/110.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "111",
+    "title": "傀儡",
+    "artist": "全てあなたの為です。",
+    "youtubeId": "XPAFfUcieLY",
+    "cover": "assets/111.jpg",
+    "audio": "assets/111.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "112",
+    "title": "街の残像",
+    "artist": "あばらや",
+    "youtubeId": "OBkLjALyriw",
+    "cover": "assets/112.jpg",
+    "audio": "assets/112.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "113",
+    "title": "ぷらぷりずむ",
+    "artist": "前髪ぱっつん少年",
+    "youtubeId": "DGb-tMhvFyg",
+    "cover": "assets/113.jpg",
+    "audio": "assets/113.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "114",
+    "title": "Call Of The Dungeon",
+    "artist": "いとうかなこ (クラシックダンジョンX2)",
+    "youtubeId": "xLeIIAJLeVw",
+    "cover": "assets/114.jpg",
+    "audio": "assets/114.mp3",
+    "startTime": 0,
+    "volume": 0.5
+  },
+  {
+    "id": "115",
+    "title": "嵌り合う体は",
+    "artist": "Green wisteria",
+    "youtubeId": "TG6yHxuK22g",
+    "cover": "assets/115.jpg",
+    "audio": "assets/115.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "116",
+    "title": "ビビデバ",
+    "artist": "星街すいせい",
+    "youtubeId": "8ZP5eqm4JqM",
+    "cover": "assets/116.jpg",
+    "audio": "assets/116.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "117",
+    "title": "天井の研ナ〇コが気になって眠れない",
+    "artist": "藤原ハガネ",
+    "youtubeId": "D32hE6596vA",
+    "cover": "assets/117.jpg",
+    "audio": "assets/117.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "118",
+    "title": "少年よ我に返れ",
+    "artist": "やくしまるえつこ",
+    "youtubeId": "9liVljr-1cs",
+    "cover": "assets/118.jpg",
+    "audio": "assets/118.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "119",
+    "title": "＊ハロー、プラネット。",
+    "artist": "sasakure.UK",
+    "youtubeId": "oVb6Gkf-IJM",
+    "cover": "assets/119.jpg",
+    "audio": "assets/119.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "120",
+    "title": "おしゃかしゃま",
+    "artist": "RADWIMPS",
+    "youtubeId": "7MaF-bWeLGw",
+    "cover": "assets/120.jpg",
+    "audio": "assets/120.mp3",
+    "startTime": 0,
+    "volume": 0.5
+  },
+  {
+    "id": "121",
+    "title": "ヒトクイザメとおともだち",
+    "artist": "けだるぎ",
+    "youtubeId": "lf9fFM5Klc4",
+    "cover": "assets/121.jpg",
+    "audio": "assets/121.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "122",
+    "title": "大海原探索中",
+    "artist": "ペーパーマリオ オリガミキング",
+    "youtubeId": "4M3xishGRxM",
+    "cover": "assets/122.jpg",
+    "audio": "assets/122.mp3",
+    "startTime": 0,
+    "volume": 0.4
+  },
+  {
+    "id": "123",
+    "title": "表",
+    "artist": "全てあなたの所為です。",
+    "youtubeId": "7OEOF6mCzIU",
+    "cover": "assets/123.jpg",
+    "audio": "assets/123.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "124",
+    "title": "できっこないを やらなくちゃ",
+    "artist": "サンボマスター",
+    "youtubeId": "ry_8lmQHzWY",
+    "cover": "assets/124.jpg",
+    "audio": "assets/124.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "125",
+    "title": "14平米にスーベニア",
+    "artist": "久川凪(デレステ)",
+    "youtubeId": "bTEV-l_x9yc",
+    "cover": "assets/125.jpg",
+    "audio": "assets/125.mp3",
+    "startTime": 0,
+    "volume": 0.4
+  },
+  {
+    "id": "126",
+    "title": "い～やい～やい～や",
+    "artist": "Neru",
+    "youtubeId": "y8-6QPEes1k",
+    "cover": "assets/126.jpg",
+    "audio": "assets/126.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "127",
+    "title": "Bell",
+    "artist": "androp",
+    "youtubeId": "jkqMwQfxhk8",
+    "cover": "assets/127.jpg",
+    "audio": "assets/127.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "128",
+    "title": "amber.ptcop",
+    "artist": "ekuson",
+    "youtubeId": "2Ocou8ZWxyw",
+    "cover": "assets/128.jpg",
+    "audio": "assets/128.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "129",
+    "title": "贅沢と君のカプチーノ",
+    "artist": "shikisai",
+    "youtubeId": "LPci3mEA5AA",
+    "cover": "assets/129.jpg",
+    "audio": "assets/129.mp3",
+    "startTime": 0,
+    "volume": 0.3
+  },
+  {
+    "id": "130",
+    "title": "SH4PESHIFT3R",
+    "artist": "Isonosuke",
+    "youtubeId": "_mlJk5cWlAo",
+    "cover": "assets/130.jpg",
+    "audio": "assets/130.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "131",
+    "title": "ヴァンパイア・ブギーナイツ",
+    "artist": "NONA LEAVES",
+    "youtubeId": "kqKkh3nd2JQ",
+    "cover": "assets/131.jpg",
+    "audio": "assets/131.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "132",
+    "title": "オーバー！",
+    "artist": "いよわ",
+    "youtubeId": "_ZKSftirY3A",
+    "cover": "assets/132.jpg",
+    "audio": "assets/132.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "133",
+    "title": "プレミアムワールド",
+    "artist": "広瀬香美",
+    "youtubeId": "BCEpwTJ3e-M",
+    "cover": "assets/133.jpg",
+    "audio": "assets/133.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "134",
+    "title": "俤",
+    "artist": "全て貴方の所為です。",
+    "youtubeId": "NLFvPVJhWv4",
+    "cover": "assets/134.jpg",
+    "audio": "assets/134.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "135",
+    "title": "宝島",
+    "artist": "T-SQUARE",
+    "youtubeId": "kRRmA1I3UNY",
+    "cover": "assets/135.jpg",
+    "audio": "assets/135.mp3",
+    "startTime": 0,
+    "volume": 0.5
+  },
+  {
+    "id": "136",
+    "title": "信号が変わります",
+    "artist": "ろりたみ",
+    "youtubeId": "6qmTmvpDij4",
+    "cover": "assets/136.jpg",
+    "audio": "assets/136.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "137",
+    "title": "赤いカラスが鳴いたから",
+    "artist": "NY",
+    "youtubeId": "ly6cVhjJNYc",
+    "cover": "assets/137.jpg",
+    "audio": "assets/137.mp3",
+    "startTime": 0,
+    "volume": 0.25
+  },
+  {
+    "id": "138",
+    "title": "愛して愛して愛して",
+    "artist": "きくお",
+    "youtubeId": "NTrm_idbhUk",
+    "cover": "assets/138.jpg",
+    "audio": "assets/138.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "139",
+    "title": "Windy Hill",
+    "artist": "ソニック ロストワールド",
+    "youtubeId": "Alclgb-aSIM",
+    "cover": "assets/139.jpg",
+    "audio": "assets/139.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "140",
+    "title": "ドラえもん",
+    "artist": "星野源",
+    "youtubeId": "ypRTzt1KrF8",
+    "cover": "assets/140.jpg",
+    "audio": "assets/140.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "141",
+    "title": "キューリーパーリー",
+    "artist": "片岡 知子, カピイ",
+    "youtubeId": "LZj5mxyDI5s",
+    "cover": "assets/141.jpg",
+    "audio": "assets/141.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "142",
+    "title": "ラストバトル",
+    "artist": "うみとまもののこどもたち",
+    "youtubeId": "Q6As-tGE3fM",
+    "cover": "assets/142.jpg",
+    "audio": "assets/142.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "143",
+    "title": "インパクトずんだもんぬいぐるみランチブレイク人形ピロぬいぐるみピローひなまつりアニメ周辺オープンコスプレ小道具ピローギフトバースデー超やわらかいぬいぐるみ小さな人形クッションゲームの周りぬいぐるみコスプレ人形少女少年アニメファンクリスマスプレゼントずんだ",
+    "artist": "なみぐる",
+    "youtubeId": "KDb4liUNwPo",
+    "cover": "assets/143.jpg",
+    "audio": "assets/143.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "144",
+    "title": "怪盗Rのテーマ",
+    "artist": "リズム怪盗R",
+    "youtubeId": "6RW-ZCfBr6k",
+    "cover": "assets/144.jpg",
+    "audio": "assets/144.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "145",
+    "title": "Haunted Dance",
+    "artist": "Mr.Asyu",
+    "youtubeId": "vij74IBUHs0",
+    "cover": "assets/145.jpg",
+    "audio": "assets/145.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "146",
+    "title": "実況",
+    "artist": "たくちっ",
+    "youtubeId": "8WYprAvPI-8",
+    "cover": "assets/146.jpg",
+    "audio": "assets/146.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "147",
+    "title": "ようこそジャパリパークへ",
+    "artist": "オーイシマサヨシ",
+    "youtubeId": "xkMdLcB_vNU",
+    "cover": "assets/147.jpg",
+    "audio": "assets/147.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "148",
+    "title": "YONA YONA DANCE",
+    "artist": "和田アキ子",
+    "youtubeId": "zh-4M5blbiI",
+    "cover": "assets/148.jpg",
+    "audio": "assets/148.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "149",
+    "title": "ピアノ×フォルテ×スキャンダル",
+    "artist": "OSTER project",
+    "youtubeId": "HXQY1VQWTX8",
+    "cover": "assets/149.jpg",
+    "audio": "assets/149.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "150",
+    "title": "カンケーガール",
+    "artist": "マサラダ",
+    "youtubeId": "5lK9z88taP8",
+    "cover": "assets/150.jpg",
+    "audio": "assets/150.mp3",
+    "startTime": 0,
+    "volume": 0.15
   }
 ]
