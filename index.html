@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Egoistic Grid Showcase</title>
+  <title>Egoistic Showcase</title>
   <style>
     * {
       box-sizing: border-box;
@@ -22,9 +22,14 @@
       overflow: hidden;
     }
 
+    button, input {
+      font-family: inherit;
+    }
+
     .app-container {
       display: flex;
       height: 100vh;
+      position: relative;
     }
 
     .main-area {
@@ -35,37 +40,45 @@
       overflow: hidden;
     }
 
-    /* 上部コントロールバー */
+    /* 上部コントロールバー（タイトルを上行、操作系を下行に分離） */
     .control-bar {
-      position: relative;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
       padding: 10px 20px;
       background-color: #181818;
       border-bottom: 1px solid #282828;
-      gap: 16px;
-      flex-wrap: nowrap;
-      min-height: 64px;
+      gap: 10px;
     }
 
     .app-title {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       color: #ffffff;
       white-space: nowrap;
+      text-align: center;
       pointer-events: none;
-      z-index: 1;
+      transition: opacity 0.2s ease;
+    }
+
+    /* タイトルのGRID/LIST強調カラー */
+    .highlight-text {
+      color: #1db954;
+    }
+
+    .controls-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 16px;
     }
 
     .control-group {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       font-size: 0.85rem;
       color: #b3b3b3;
     }
@@ -74,7 +87,7 @@
     .sliders-container {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 6px;
     }
 
     .slider-row {
@@ -84,6 +97,12 @@
       font-size: 0.75rem;
       font-weight: bold;
       color: #b3b3b3;
+      transition: opacity 0.2s ease;
+    }
+
+    .slider-row.disabled {
+      opacity: 0.3;
+      pointer-events: none;
     }
 
     .slider-row label {
@@ -105,12 +124,10 @@
       transition: background 0.2s ease;
     }
 
-    /* ホバー時にトラックの色を少し明るく */
     .slider-row input[type="range"]:hover {
       background: #4e4e4e;
     }
 
-    /* つまみ（Thumb）のカスタマイズ: Chrome/Safari/Edge */
     .slider-row input[type="range"]::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
@@ -128,7 +145,6 @@
       background: #1ed760;
     }
 
-    /* つまみ（Thumb）のカスタマイズ: Firefox */
     .slider-row input[type="range"]::-moz-range-thumb {
       width: 12px;
       height: 12px;
@@ -146,6 +162,7 @@
     }
 
     .btn {
+      font-family: "LINE Seed JP", sans-serif;
       background-color: #282828;
       color: #fff;
       border: 1px solid #3e3e3e;
@@ -158,6 +175,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      user-select: none;
     }
 
     .btn:hover {
@@ -171,26 +189,44 @@
       color: #000;
     }
 
+    .view-toggle-group {
+      display: inline-flex;
+      background-color: #282828;
+      padding: 3px;
+      border-radius: 20px;
+      border: 1px solid #3e3e3e;
+    }
+
+    .view-toggle-btn {
+      font-family: "LINE Seed JP", sans-serif;
+      background: transparent;
+      border: none;
+      color: #b3b3b3;
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .view-toggle-btn.active {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
     .grid-wrapper {
       flex: 1;
       padding: 12px;
       overflow-y: auto;
     }
 
+    /* GRID モード */
     .grid-container {
       display: grid;
       grid-template-columns: repeat(var(--grid-cols, 10), 1fr);
       gap: 4px;
       width: 100%;
-    }
-
-    .grid-footer {
-      text-align: center;
-      padding: 40px 0 20px; 
-      color: #6a6a6a;      
-      font-size: 0.85rem;
-      letter-spacing: 0.12em; 
-      user-select: none;
     }
 
     .track-card {
@@ -222,6 +258,102 @@
       display: block;
     }
 
+    /* LIST モード */
+    .list-container {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .list-row {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, 0.02);
+      cursor: pointer;
+      transition: background-color 0.15s ease;
+      gap: 16px;
+      user-select: none;
+    }
+
+    .list-row:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .list-row.active {
+      background-color: rgba(29, 185, 84, 0.15);
+    }
+
+    .list-number {
+      width: 36px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #808080;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .list-row.active .list-number {
+      color: #1db954;
+    }
+
+    .list-cover {
+      width: 44px;
+      height: 44px;
+      border-radius: 4px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background-color: #282828;
+    }
+
+    .list-info {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      min-width: 0;
+      gap: 16px;
+    }
+
+    .list-title {
+      font-size: 0.95rem;
+      font-weight: bold;
+      color: #ffffff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      flex: 1;
+      line-height: 1.4;
+      padding: 2px 0;
+    }
+
+    .list-row.active .list-title {
+      color: #1db954;
+    }
+
+    .list-artist {
+      font-size: 0.85rem;
+      color: #b3b3b3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      flex: 1;
+      line-height: 1.4;
+      padding: 2px 0;
+    }
+
+    .grid-footer {
+      text-align: center;
+      padding: 40px 0 20px; 
+      color: #6a6a6a;      
+      font-size: 0.85rem;
+      letter-spacing: 0.12em; 
+      user-select: none;
+    }
+
     .detail-panel {
       width: 320px;
       background-color: #181818;
@@ -241,7 +373,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      animation: slideInRight 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
     .detail-info-group {
@@ -347,60 +479,64 @@
       }
     }
 
+    /* モバイルレスポンシブ：詳細パネルを下部固定に */
     @media (max-width: 768px) {
-      body {
-        overflow-y: auto;
-        height: auto;
-      }
-
-      .app-container {
-        flex-direction: column;
-        height: auto;
-        min-height: 100vh;
-      }
-
-      .main-area {
-        height: auto;
-        overflow: visible;
-      }
-
       .control-bar {
-        flex-wrap: wrap;
-        padding: 10px 14px;
-        gap: 10px;
-        min-height: auto;
+        padding: 8px 12px;
+        gap: 8px;
       }
 
       .app-title {
-        position: static;
-        transform: none;
-        width: 100%;
-        text-align: center;
-        font-size: 1rem;
-        order: -1;
+        font-size: 0.95rem;
+      }
+
+      .controls-row {
+        gap: 8px;
       }
 
       .slider-row input[type="range"] {
-        width: 80px;
+        width: 70px;
       }
 
+      .list-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+      }
+
+      .list-artist {
+        font-size: 0.75rem;
+      }
+
+      /* メイン表示領域の下部に固定パネルの高さ分だけパディングを確保 */
+      .grid-wrapper {
+        padding-bottom: 180px;
+      }
+
+      /* 詳細パネルを画面最下部に固定表示 */
       .detail-panel {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
         width: 100%;
         border-left: none;
         border-top: 1px solid #282828;
-        padding: 16px;
-        min-height: auto;
+        padding: 12px 16px;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
+        z-index: 100;
+        background-color: #181818;
       }
 
       .detail-content {
         flex-direction: row;
         align-items: flex-start;
-        gap: 14px;
+        gap: 12px;
       }
 
       .detail-cover {
-        width: 110px;
-        height: 110px;
+        width: 100px;
+        height: 100px;
         margin-bottom: 0;
         flex-shrink: 0;
         border-radius: 8px;
@@ -413,31 +549,31 @@
       }
 
       .detail-number {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         margin-bottom: 2px;
         text-align: left;
       }
 
       .detail-title {
-        font-size: 1rem;
+        font-size: 0.95rem;
         margin-bottom: 2px;
         text-align: left;
       }
 
       .detail-artist {
         font-size: 0.8rem;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
         text-align: left;
       }
 
       audio {
-        margin-bottom: 8px;
+        margin-bottom: 6px;
         height: 32px;
       }
 
       .yt-button {
         padding: 6px 12px;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
       }
     }
   </style>
@@ -447,25 +583,32 @@
   <div class="app-container">
     <div class="main-area">
       <div class="control-bar">
-        <!-- 左側：縦並びのスライダーエリア -->
-        <div class="sliders-container">
-          <div class="slider-row">
-            <label for="zoom-slider">SIZE</label>
-            <!-- min:4(最も小さい表示=列数16), max:16(最も大きい表示=列数4) -->
-            <input type="range" id="zoom-slider" min="4" max="16" value="10">
-          </div>
-          <div class="slider-row">
-            <label for="volume-slider">VOL</label>
-            <input type="range" id="volume-slider" min="0" max="200" value="80">
-          </div>
-        </div>
+        <!-- 最上部：タイトル（独立した行） -->
+        <h1 class="app-title" id="app-title">EGOISTIC <span class="highlight-text">GRID</span> SHOWCASE</h1>
 
-        <h1 class="app-title">EGOISTIC GRID SHOWCASE</h1>
+        <!-- 下部：コントロール行 -->
+        <div class="controls-row">
+          <!-- 左側：縦並びのスライダーエリア -->
+          <div class="sliders-container">
+            <div class="slider-row" id="size-slider-row">
+              <label for="zoom-slider">SIZE</label>
+              <input type="range" id="zoom-slider" min="4" max="16" value="10">
+            </div>
+            <div class="slider-row">
+              <label for="volume-slider">VOL</label>
+              <input type="range" id="volume-slider" min="0" max="200" value="80">
+            </div>
+          </div>
 
-        <!-- 右側：ボタンエリア -->
-        <div class="control-group">
-          <button class="btn" id="random-btn">🎲</button>
-          <button class="btn" id="shuffle-toggle-btn">🔀 OFF</button>
+          <!-- 右側：ボタンエリア -->
+          <div class="control-group">
+            <div class="view-toggle-group">
+              <button class="view-toggle-btn active" id="view-grid-btn">GRID</button>
+              <button class="view-toggle-btn" id="view-list-btn">LIST</button>
+            </div>
+            <button class="btn" id="random-btn">🎲</button>
+            <button class="btn" id="shuffle-toggle-btn">🔀 OFF</button>
+          </div>
         </div>
       </div>
 
@@ -487,7 +630,8 @@
     let currentIndex = -1;
     let currentAudio = null;
     let isShuffle = false;
-    let playedIndices = []; // シャッフル再生の重複防止用履歴
+    let currentViewMode = 'grid'; // 'grid' または 'list'
+    let playedIndices = [];
 
     // 音量設定（初期値は0.8倍 = 80%）
     let globalVolume = localStorage.getItem('app_volume') !== null 
@@ -496,15 +640,18 @@
 
     const gridEl = document.getElementById('grid');
     const detailPanelEl = document.getElementById('detail-panel');
+    const appTitleEl = document.getElementById('app-title');
     const zoomSlider = document.getElementById('zoom-slider');
     const volumeSlider = document.getElementById('volume-slider');
+    const sizeSliderRow = document.getElementById('size-slider-row');
     const randomBtn = document.getElementById('random-btn');
     const shuffleToggleBtn = document.getElementById('shuffle-toggle-btn');
+    const viewGridBtn = document.getElementById('view-grid-btn');
+    const viewListBtn = document.getElementById('view-list-btn');
 
-    // 初期音量スライダーの値を設定 (0〜200)
+    // 初期音量スライダーの値を設定
     volumeSlider.value = Math.round(globalVolume * 100);
 
-    // スライダー背景の塗りつぶし更新関数
     function updateSliderBackground(slider) {
       const min = parseFloat(slider.min) || 0;
       const max = parseFloat(slider.max) || 100;
@@ -513,11 +660,9 @@
       slider.style.background = `linear-gradient(to right, #1db954 0%, #1db954 ${percentage}%, #3e3e3e ${percentage}%, #3e3e3e 100%)`;
     }
 
-    // スライダーのグラデーション初期化
     updateSliderBackground(zoomSlider);
     updateSliderBackground(volumeSlider);
 
-    // ズームスライダー値からグリッド列数を算出（右にいくほど列数が減り画像が大きくなる）
     function applyGridSize(sliderValue) {
       const min = parseInt(zoomSlider.min, 10);
       const max = parseInt(zoomSlider.max, 10);
@@ -530,35 +675,70 @@
       try {
         const response = await fetch('tracks.json');
         tracks = await response.json();
-        renderGrid();
+        renderTracks();
       } catch (error) {
         console.error('tracks.json の読み込みに失敗しました:', error);
         detailPanelEl.innerHTML = `<p style="color:red;">tracks.json の読み込みエラー</p>`;
       }
     }
 
-    // 2. グリッドの描写
-    function renderGrid() {
+    // 2. 表示レンダリング（GRID / LIST 切り替え対応）
+    function renderTracks() {
       gridEl.innerHTML = '';
-      tracks.forEach((track, index) => {
-        const card = document.createElement('div');
-        card.className = 'track-card';
-        card.dataset.index = index;
 
-        const img = document.createElement('img');
-        img.src = track.cover;
-        img.alt = track.title;
-        img.loading = "lazy";
+      if (currentViewMode === 'grid') {
+        gridEl.className = 'grid-container';
+        sizeSliderRow.classList.remove('disabled');
+        appTitleEl.innerHTML = 'EGOISTIC <span class="highlight-text">GRID</span> SHOWCASE';
 
-        card.appendChild(img);
+        tracks.forEach((track, index) => {
+          const card = document.createElement('div');
+          card.className = 'track-card' + (index === currentIndex ? ' active' : '');
+          card.dataset.index = index;
 
-        card.addEventListener('click', (e) => {
-          e.stopPropagation();
-          selectTrack(index);
+          const img = document.createElement('img');
+          img.src = track.cover;
+          img.alt = track.title;
+          img.loading = "lazy";
+
+          card.appendChild(img);
+
+          card.addEventListener('click', (e) => {
+            e.stopPropagation();
+            selectTrack(index);
+          });
+
+          gridEl.appendChild(card);
         });
+      } else {
+        gridEl.className = 'list-container';
+        sizeSliderRow.classList.add('disabled');
+        appTitleEl.innerHTML = 'EGOISTIC <span class="highlight-text">LIST</span> SHOWCASE';
 
-        gridEl.appendChild(card);
-      });
+        tracks.forEach((track, index) => {
+          const row = document.createElement('div');
+          row.className = 'list-row' + (index === currentIndex ? ' active' : '');
+          row.dataset.index = index;
+
+          const trackNum = String(track.id || index + 1).padStart(3, '0');
+
+          row.innerHTML = `
+            <div class="list-number">${trackNum}</div>
+            <img class="list-cover" src="${track.cover}" alt="${escapeHtml(track.title)}" loading="lazy">
+            <div class="list-info">
+              <div class="list-title">${escapeHtml(track.title)}</div>
+              <div class="list-artist">${escapeHtml(track.artist)}</div>
+            </div>
+          `;
+
+          row.addEventListener('click', (e) => {
+            e.stopPropagation();
+            selectTrack(index);
+          });
+
+          gridEl.appendChild(row);
+        });
+      }
     }
 
     // 3. 曲選択・再生処理
@@ -573,14 +753,15 @@
       currentIndex = index;
       const track = tracks[index];
 
-      // 再生履歴に追加（重複防止用）
       if (!playedIndices.includes(index)) {
         playedIndices.push(index);
       }
 
-      document.querySelectorAll('.track-card').forEach((c, idx) => {
-        c.classList.toggle('active', idx === index);
-      });
+      // アクティブ要素のクラス切り替え（GRID/LIST双方対応）
+      const items = gridEl.children;
+      for (let i = 0; i < items.length; i++) {
+        items[i].classList.toggle('active', i === index);
+      }
 
       if (currentAudio) {
         currentAudio.pause();
@@ -592,6 +773,7 @@
 
       const trackNum = String(track.id || index + 1).padStart(3, '0');
 
+      detailPanelEl.classList.add('has-track');
       detailPanelEl.innerHTML = `
         <div class="detail-content">
           <img class="detail-cover" src="${track.cover}" alt="${escapeHtml(track.title)}">
@@ -611,10 +793,6 @@
       const ytLink = document.getElementById('yt-link');
       currentAudio = player;
 
-      if (window.innerWidth <= 768) {
-        detailPanelEl.scrollIntoView({ behavior: 'smooth' });
-      }
-
       if (ytLink) {
         ytLink.addEventListener('click', () => {
           if (currentAudio) {
@@ -624,8 +802,6 @@
       }
 
       const startTime = track.startTime || 0;
-      
-      // 個別音量 × マスター音量（最大2.0まで許容）
       const trackRelativeVol = track.volume !== undefined ? track.volume : 1.0;
       const finalVolume = Math.min(2.0, trackRelativeVol * globalVolume);
 
@@ -640,13 +816,12 @@
       });
     }
 
-    // 4. 次の曲へ移行（重複制御付きシャッフル対応）
+    // 4. 次の曲へ移行
     function playNextTrack() {
       if (tracks.length === 0) return;
 
       let nextIndex;
       if (isShuffle && tracks.length > 1) {
-        // 未再生のインデックスリストを作成
         let unplayed = [];
         for (let i = 0; i < tracks.length; i++) {
           if (!playedIndices.includes(i)) {
@@ -654,7 +829,6 @@
           }
         }
 
-        // すべて再生済みの場合は履歴をリセット（現在の曲だけ残す）
         if (unplayed.length === 0) {
           playedIndices = [currentIndex];
           for (let i = 0; i < tracks.length; i++) {
@@ -664,7 +838,6 @@
           }
         }
 
-        // 未再生の候補からランダムに1曲選択
         const randomIndex = Math.floor(Math.random() * unplayed.length);
         nextIndex = unplayed[randomIndex];
       } else {
@@ -680,7 +853,11 @@
         currentAudio = null;
       }
       currentIndex = -1;
-      document.querySelectorAll('.track-card').forEach(c => c.classList.remove('active'));
+      const items = gridEl.children;
+      for (let i = 0; i < items.length; i++) {
+        items[i].classList.remove('active');
+      }
+      detailPanelEl.classList.remove('has-track');
       detailPanelEl.innerHTML = `
         <p class="placeholder-text">NO TRACK</p>
       `;
@@ -688,7 +865,6 @@
 
     // --- イベントリスナー ---
 
-    // 音量スライダー操作時
     volumeSlider.addEventListener('input', (e) => {
       globalVolume = parseFloat(e.target.value) / 100;
       localStorage.setItem('app_volume', globalVolume);
@@ -701,15 +877,32 @@
       }
     });
 
-    // ズームスライダー操作時（右にスライドすると画像が大きくなる）
     zoomSlider.addEventListener('input', (e) => {
       applyGridSize(e.target.value);
       updateSliderBackground(e.target);
     });
 
+    // モード切り替えイベント
+    viewGridBtn.addEventListener('click', () => {
+      if (currentViewMode === 'grid') return;
+      currentViewMode = 'grid';
+      viewGridBtn.classList.add('active');
+      viewListBtn.classList.remove('active');
+      renderTracks();
+    });
+
+    viewListBtn.addEventListener('click', () => {
+      if (currentViewMode === 'list') return;
+      currentViewMode = 'list';
+      viewListBtn.classList.add('active');
+      viewGridBtn.classList.remove('active');
+      renderTracks();
+    });
+
     document.addEventListener('click', (e) => {
       if (
         e.target.closest('.track-card') || 
+        e.target.closest('.list-row') || 
         e.target.closest('.control-bar') || 
         e.target.closest('audio') || 
         e.target.closest('.yt-button') ||
@@ -720,7 +913,6 @@
       deselectTrack();
     });
 
-    // ダイス（ランダム単発再生）ボタン
     randomBtn.addEventListener('click', () => {
       if (tracks.length === 0) return;
       
@@ -744,13 +936,11 @@
       selectTrack(unplayed[randomIndex]);
     });
 
-    // シャッフルON/OFF切替ボタン
     shuffleToggleBtn.addEventListener('click', () => {
       isShuffle = !isShuffle;
       shuffleToggleBtn.classList.toggle('active', isShuffle);
       shuffleToggleBtn.textContent = isShuffle ? '🔀 ON' : '🔀 OFF';
 
-      // シャッフルONにした時、現在の曲だけを履歴に残してリセット
       if (isShuffle) {
         playedIndices = currentIndex !== -1 ? [currentIndex] : [];
       }
@@ -762,7 +952,6 @@
       }[m])) : '';
     }
 
-    // 初期グリッドサイズの指定
     applyGridSize(zoomSlider.value);
     loadTracks();
   </script>
