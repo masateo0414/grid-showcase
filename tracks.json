@@ -442,7 +442,7 @@
   {
     "id": "045",
     "title": "麗しのブロンディ",
-    "artist": "NONA LEAVES",
+    "artist": "NONA REEVES",
     "youtubeId": "eL-fcfQvb9c",
     "cover": "assets/045.jpg",
     "audio": "assets/045.mp3",
@@ -1302,7 +1302,7 @@
   {
     "id": "131",
     "title": "ヴァンパイア・ブギーナイツ",
-    "artist": "NONA LEAVES",
+    "artist": "NONA REEVES",
     "youtubeId": "kqKkh3nd2JQ",
     "cover": "assets/131.jpg",
     "audio": "assets/131.mp3",
@@ -1317,7 +1317,7 @@
     "cover": "assets/132.jpg",
     "audio": "assets/132.mp3",
     "startTime": 0,
-    "volume": 0.15
+    "volume": 0.2
   },
   {
     "id": "133",
@@ -1417,7 +1417,7 @@
     "cover": "assets/142.jpg",
     "audio": "assets/142.mp3",
     "startTime": 0,
-    "volume": 0.25
+    "volume": 0.3
   },
   {
     "id": "143",
@@ -1498,5 +1498,505 @@
     "audio": "assets/150.mp3",
     "startTime": 0,
     "volume": 0.15
+  },
+  {
+    "id": "151",
+    "title": "THE PIRATE SHIP",
+    "artist": "大乱闘スマッシュブラザーズ SPECIAL",
+    "youtubeId": "FaOqgboY-BA",
+    "cover": "assets/151.jpg",
+    "audio": "assets/151.mp3",
+    "startTime": 0,
+    "volume": 0.35
+  },
+  {
+    "id": "152",
+    "title": "好き！雪！本気マジック",
+    "artist": "Mitchie M",
+    "youtubeId": "79N1O0lF0GY",
+    "cover": "assets/152.jpg",
+    "audio": "assets/152.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "153",
+    "title": "Memes",
+    "artist": "NIVIRO",
+    "youtubeId": "hgXZQfHySDw",
+    "cover": "assets/153.jpg",
+    "audio": "assets/153.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "154",
+    "title": "Sanukite",
+    "artist": "2号.",
+    "youtubeId": "3YVAA4hzkbs",
+    "cover": "assets/154.jpg",
+    "audio": "assets/154.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "155",
+    "title": ".",
+    "artist": "ころんば",
+    "youtubeId": "ok7UX3utzvI",
+    "cover": "assets/155.jpg",
+    "audio": "assets/155.mp3",
+    "startTime": 0,
+    "volume": 0.3
+  },
+  {
+    "id": "156",
+    "title": "一億年恋してる",
+    "artist": "いのうつはSA",
+    "youtubeId": "vbP45z87zf0",
+    "cover": "assets/156.jpg",
+    "audio": "assets/156.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "157",
+    "title": "メガネゴーラウンド",
+    "artist": "オーイシマサヨシ",
+    "youtubeId": "mejxoKBSdzA",
+    "cover": "assets/157.jpg",
+    "audio": "assets/157.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "158",
+    "title": "ぼくらの16bitエンズ・トリガー",
+    "artist": "sasakure.UK",
+    "youtubeId": "_UbOg7Y3ZnI",
+    "cover": "assets/158.jpg",
+    "audio": "assets/158.mp3",
+    "startTime": 0,
+    "volume": 0.25
+  },
+  {
+    "id": "159",
+    "title": "Pixel Galaxy",
+    "artist": "Snail's House",
+    "youtubeId": "3nlSDxvt6JU",
+    "cover": "assets/159.jpg",
+    "audio": "assets/159.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "160",
+    "title": "YADOKARI",
+    "artist": "井上涼",
+    "youtubeId": "pihhu5Mv0p0",
+    "cover": "assets/160.jpg",
+    "audio": "assets/160.mp3",
+    "startTime": 0,
+    "volume": 0.5
+  },
+  {
+    "id": "161",
+    "title": "ミックスナッツ",
+    "artist": "Official髭男dism",
+    "youtubeId": "CbH2F0kXgTY",
+    "cover": "assets/161.jpg",
+    "audio": "assets/161.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "162",
+    "title": "Hopes and Dreams",
+    "artist": "UNDERTALE",
+    "youtubeId": "wbO3p7_Mf30",
+    "cover": "assets/162.jpg",
+    "audio": "assets/162.mp3",
+    "startTime": 0,
+    "volume": 0.3
+  },
+  {
+    "id": "163",
+    "title": "たーのしーたーのしーたーのしー！",
+    "artist": "sasakure.UK",
+    "youtubeId": "KyT0XvxFuRI",
+    "cover": "assets/163.jpg",
+    "audio": "assets/163.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "164",
+    "title": "∴∴∴∴",
+    "artist": "全てあなたの所以です。",
+    "youtubeId": "XkIKM80-Znc",
+    "cover": "assets/164.jpg",
+    "audio": "assets/164.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "165",
+    "title": "ポップコーン!!",
+    "artist": "原口沙輔",
+    "youtubeId": "k5yqJnaCtRo",
+    "cover": "assets/165.jpg",
+    "audio": "assets/165.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "166",
+    "title": "おっさん",
+    "artist": "岡崎体育",
+    "youtubeId": "tviCu14gwAo",
+    "cover": "assets/166.jpg",
+    "audio": "assets/166.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "167",
+    "title": "Magic show",
+    "artist": "Mr.Asyu",
+    "youtubeId": "yf0epMHPZ_c",
+    "cover": "assets/167.jpg",
+    "audio": "assets/167.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "168",
+    "title": "cherry*merry*cherry",
+    "artist": "緒方智絵里",
+    "youtubeId": "mn4NvCZ-ROU",
+    "cover": "assets/168.jpg",
+    "audio": "assets/168.mp3",
+    "startTime": 0,
+    "volume": 0.45
+  },
+  {
+    "id": "169",
+    "title": "あさやけもゆうやけもないんだ",
+    "artist": "夏毛",
+    "youtubeId": "ezME0Wy0OAE",
+    "cover": "assets/169.jpg",
+    "audio": "assets/169.mp3",
+    "startTime": 0,
+    "volume": 0.3
+  },
+  {
+    "id": "170",
+    "title": "オドループのピコピコリミックス",
+    "artist": "にす",
+    "youtubeId": "7FDs9HNf7h4",
+    "cover": "assets/170.jpg",
+    "audio": "assets/170.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "171",
+    "title": "ヒラメがやねからおちてきた",
+    "artist": "ଳ",
+    "youtubeId": "IukWjdd-oyU",
+    "cover": "assets/171.jpg",
+    "audio": "assets/171.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "172",
+    "title": "K²",
+    "artist": "全てあなたの所為です。",
+    "youtubeId": "hVLwitk9dc4",
+    "cover": "assets/172.jpg",
+    "audio": "assets/172.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "173",
+    "title": "Baqeela",
+    "artist": "Owl＊tree",
+    "youtubeId": "MU3xLJeksvk",
+    "cover": "assets/173.jpg",
+    "audio": "assets/173.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "174",
+    "title": "望遠鏡の外の景色",
+    "artist": "椎名林檎",
+    "youtubeId": "JenMBFV9g60",
+    "cover": "assets/174.jpg",
+    "audio": "assets/174.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "175",
+    "title": "くらがりシティライフ",
+    "artist": "電ǂ鯨",
+    "youtubeId": "OeRYMeZk5vg",
+    "cover": "assets/175.jpg",
+    "audio": "assets/175.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "176",
+    "title": "離れ〲",
+    "artist": "全て貴方の所為です。",
+    "youtubeId": "mdJCferUwzw",
+    "cover": "assets/176.jpg",
+    "audio": "assets/176.mp3",
+    "startTime": 0,
+    "volume": 0.25
+  },
+  {
+    "id": "177",
+    "title": "Umapyoi Celebrity",
+    "artist": "長谷部翔",
+    "youtubeId": "RQvTU0b386E",
+    "cover": "assets/177.jpg",
+    "audio": "assets/177.mp3",
+    "startTime": 0,
+    "volume": 0.3
+  },
+  {
+    "id": "178",
+    "title": "Demolish",
+    "artist": "デレステ",
+    "youtubeId": "05ZnooYQqHE",
+    "cover": "assets/178.jpg",
+    "audio": "assets/178.mp3",
+    "startTime": 0,
+    "volume": 0.45
+  },
+  {
+    "id": "179",
+    "title": "盆",
+    "artist": "Speder2",
+    "youtubeId": "0l1JxbI7uB0",
+    "cover": "assets/179.jpg",
+    "audio": "assets/179.mp3",
+    "startTime": 0,
+    "volume": 0.35
+  },
+  {
+    "id": "180",
+    "title": "3時12分",
+    "artist": "TAKU INOUE",
+    "youtubeId": "LYFciXBcXIQ",
+    "cover": "assets/180.jpg",
+    "audio": "assets/180.mp3",
+    "startTime": 0,
+    "volume": 0.18
+  },
+  {
+    "id": "181",
+    "title": "モミジ山",
+    "artist": "ペーパーマリオ オリガミキング",
+    "youtubeId": "_gNcQ89Gr5I",
+    "cover": "assets/181.jpg",
+    "audio": "assets/181.mp3",
+    "startTime": 0,
+    "volume": 0.3
+  },
+  {
+    "id": "182",
+    "title": "Peepy's Theme",
+    "artist": "ememouse",
+    "youtubeId": "Yep6GVM0IYs",
+    "cover": "assets/182.jpg",
+    "audio": "assets/182.mp3",
+    "startTime": 0,
+    "volume": 0.25
+  },
+  {
+    "id": "183",
+    "title": "夜櫻ブレヰダアズ",
+    "artist": "ぽんきち",
+    "youtubeId": "05EF3LLPFy4",
+    "cover": "assets/183.jpg",
+    "audio": "assets/183.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "184",
+    "title": "ニジイロ＊アドベンチュア",
+    "artist": "sasakure.UK",
+    "youtubeId": "mnG1Lsy_aak",
+    "cover": "assets/184.jpg",
+    "audio": "assets/184.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "185",
+    "title": "夢見",
+    "artist": "全てこの世界の所為です。",
+    "youtubeId": "RDOPXlU3Gnk",
+    "cover": "assets/185.jpg",
+    "audio": "assets/185.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "186",
+    "title": "しゅがーはぁと☆レボリューション",
+    "artist": "佐藤心",
+    "youtubeId": "cMXSRwY5sQ0",
+    "cover": "assets/186.jpg",
+    "audio": "assets/186.mp3",
+    "startTime": 0,
+    "volume": 0.5
+  },
+  {
+    "id": "187",
+    "title": "高嶺の花子さん",
+    "artist": "back number",
+    "youtubeId": "SII-S-zCg-c",
+    "cover": "assets/187.jpg",
+    "audio": "assets/187.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "188",
+    "title": "メクルメ",
+    "artist": "篠澤広(初星学園)",
+    "youtubeId": "vG5_bwL7UkI",
+    "cover": "assets/188.jpg",
+    "audio": "assets/188.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "189",
+    "title": "蛮殻ミックスモダン",
+    "artist": "すりみ連合(スプラトゥーン3)",
+    "youtubeId": "XL12tgdkzV0",
+    "cover": "assets/189.jpg",
+    "audio": "assets/189.mp3",
+    "startTime": 0,
+    "volume": 0.25
+  },
+  {
+    "id": "190",
+    "title": "暴れだす",
+    "artist": "ウルフルズ",
+    "youtubeId": "FxbFA0FUvxI",
+    "cover": "assets/190.jpg",
+    "audio": "assets/190.mp3",
+    "startTime": 0,
+    "volume": 0.45
+  },
+  {
+    "id": "191",
+    "title": "BIG BROTHER",
+    "artist": "P-MODEL",
+    "youtubeId": "hOrTU2NNDVQ",
+    "cover": "assets/191.jpg",
+    "audio": "assets/191.mp3",
+    "startTime": 0,
+    "volume": 0.3
+  },
+  {
+    "id": "192",
+    "title": "らいくあらいと",
+    "artist": "sasakure.UK,  フェネック",
+    "youtubeId": "1IzpILZfXNI",
+    "cover": "assets/192.jpg",
+    "audio": "assets/192.mp3",
+    "startTime": 0,
+    "volume": 0.25
+  },
+  {
+    "id": "193",
+    "title": "コウメ太夫 Remix",
+    "artist": "にほしか",
+    "youtubeId": "ecYYicWrCEA",
+    "cover": "assets/193.jpg",
+    "audio": "assets/193.mp3",
+    "startTime": 0,
+    "volume": 0.25
+  },
+  {
+    "id": "194",
+    "title": "レイトン教授のテーマ",
+    "artist": "レイトン教授シリーズ",
+    "youtubeId": "GYlpoteRT6o",
+    "cover": "assets/194.jpg",
+    "audio": "assets/194.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "195",
+    "title": "忘れられないの",
+    "artist": "サカナクション",
+    "youtubeId": "BxqYUbNR-c0",
+    "cover": "assets/195.jpg",
+    "audio": "assets/195.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "196",
+    "title": "月光",
+    "artist": "キタニタツヤ",
+    "youtubeId": "8TghOw3v61k",
+    "cover": "assets/196.jpg",
+    "audio": "assets/196.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "197",
+    "title": "あぶく",
+    "artist": "ヨルシカ",
+    "youtubeId": "OHAjc-ayhus",
+    "cover": "assets/197.jpg",
+    "audio": "assets/197.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "198",
+    "title": "日々あどべんちゃーなのでしてー",
+    "artist": "依田芳乃",
+    "youtubeId": "iHvY8m322yg",
+    "cover": "assets/198.jpg",
+    "audio": "assets/198.mp3",
+    "startTime": 0,
+    "volume": 0.25
+  },
+  {
+    "id": "199",
+    "title": "エンディング",
+    "artist": "スーパーペーパーマリオ",
+    "youtubeId": "3zqNr0Qjo_M",
+    "cover": "assets/199.jpg",
+    "audio": "assets/199.mp3",
+    "startTime": 0,
+    "volume": 0.4
+  },
+  {
+    "id": "200",
+    "title": "ヤツメ穴",
+    "artist": "ころんば",
+    "youtubeId": "C9PFVo1FEwU",
+    "cover": "assets/200.jpg",
+    "audio": "assets/200.mp3",
+    "startTime": 0,
+    "volume": 0.3
   }
 ]
