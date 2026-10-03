@@ -112,7 +112,7 @@
   {
     "id": "012",
     "title": "DIVER",
-    "artist": "やくしまるえつこ",
+    "artist": "やくしまるえつこ (塊魂)",
     "youtubeId": "LqqJElGpF44",
     "cover": "assets/012.jpg",
     "audio": "assets/012.mp3",
@@ -651,7 +651,7 @@
   },
   {
     "id": "066",
-    "title": "青は止まれ",
+    "title": "しじまのはて",
     "artist": "なみぐる, Aohada",
     "youtubeId": "ZhynJZGwIHk",
     "cover": "assets/066.jpg",
@@ -1242,7 +1242,7 @@
   {
     "id": "125",
     "title": "14平米にスーベニア",
-    "artist": "久川凪(デレステ)",
+    "artist": "久川凪",
     "youtubeId": "bTEV-l_x9yc",
     "cover": "assets/125.jpg",
     "audio": "assets/125.mp3",
@@ -1998,5 +1998,565 @@
     "audio": "assets/200.mp3",
     "startTime": 0,
     "volume": 0.3
+  },
+  {
+    "id": "201",
+    "title": "創造",
+    "artist": "星野源",
+    "youtubeId": "74FIsXlS0EQ",
+    "cover": "assets/201.jpg",
+    "audio": "assets/201.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "202",
+    "title": "未来のミュージアム",
+    "artist": "Perfume",
+    "youtubeId": "s8_vqfjYpBg",
+    "cover": "assets/202.jpg",
+    "audio": "assets/202.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "203",
+    "title": "雨曝",
+    "artist": "全て貴方の所為です。",
+    "youtubeId": "mxKg4mBr8dQ",
+    "cover": "assets/203.jpg",
+    "audio": "assets/203.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "204",
+    "title": "KAGOME KAGOME",
+    "artist": "まいわい",
+    "youtubeId": "oXueYnx1QQo",
+    "cover": "assets/204.jpg",
+    "audio": "assets/204.mp3",
+    "startTime": 0,
+    "volume": 0.4
+  },
+  {
+    "id": "205",
+    "title": "ボックスワンターバ〜ン",
+    "artist": "マキシウキョウ, ぼくわたチャンネル",
+    "youtubeId": "NjZnxThhM1c",
+    "cover": "assets/205.jpg",
+    "audio": "assets/205.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "206",
+    "title": "フレ！フレ！ベストフレンズ",
+    "artist": "けもフレ",
+    "youtubeId": "hsaf6Jevl2U",
+    "cover": "assets/206.jpg",
+    "audio": "assets/206.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "207",
+    "title": "mosi mosi?",
+    "artist": "楽音",
+    "youtubeId": "jcKUEQMCqYc",
+    "cover": "assets/207.jpg",
+    "audio": "assets/207.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "208",
+    "title": "クーネル・エンゲイザー",
+    "artist": "電ǂ鯨",
+    "youtubeId": "sGNOLLOfFwM",
+    "cover": "assets/208.jpg",
+    "audio": "assets/208.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "209",
+    "title": "東京は夜の七時～リオは朝の七時～",
+    "artist": "椎名林檎",
+    "youtubeId": "BGCvtH835xY",
+    "cover": "assets/209.jpg",
+    "audio": "assets/209.mp3",
+    "startTime": 0,
+    "volume": 0.5
+  },
+  {
+    "id": "210",
+    "title": "新宝島",
+    "artist": "サカナクション",
+    "youtubeId": "LIlZCmETvsY",
+    "cover": "assets/210.jpg",
+    "audio": "assets/210.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "211",
+    "title": "New Soul",
+    "artist": "NONA LEAVES",
+    "youtubeId": "WrLwyTwOreE",
+    "cover": "assets/211.jpg",
+    "audio": "assets/211.mp3",
+    "startTime": 0,
+    "volume": 0.4
+  },
+  {
+    "id": "212",
+    "title": "初雪とプリン",
+    "artist": "yadrigg(やどりぎ)",
+    "youtubeId": "FD0NtMTjXao",
+    "cover": "assets/212.jpg",
+    "audio": "assets/212.mp3",
+    "startTime": 0,
+    "volume": 0.13
+  },
+  {
+    "id": "213",
+    "title": "星屑ストラック",
+    "artist": "太鼓の達人",
+    "youtubeId": "z8pz0LVCw6c",
+    "cover": "assets/213.jpg",
+    "audio": "assets/213.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "214",
+    "title": "進捗ダメダメです",
+    "artist": "GYARI",
+    "youtubeId": "YzuWMyd7Pjk",
+    "cover": "assets/214.jpg",
+    "audio": "assets/214.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "215",
+    "title": "’’’’’ 全てあなたの所為です。Remix",
+    "artist": "x0o0x, 全てあなたの所為です。",
+    "youtubeId": "e2zkh8vg0TY",
+    "cover": "assets/215.jpg",
+    "audio": "assets/215.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "216",
+    "title": "魂モード",
+    "artist": "MC Taniguchi",
+    "youtubeId": "soXlTwE0T7k",
+    "cover": "assets/216.jpg",
+    "audio": "assets/216.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "217",
+    "title": "タイガーランペイジ",
+    "artist": "sasakure.UK",
+    "youtubeId": "ZDUS04dtMu8",
+    "cover": "assets/217.jpg",
+    "audio": "assets/217.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "218",
+    "title": "部屋に照らされた光",
+    "artist": "にほしか",
+    "youtubeId": "kGGqhekMox8",
+    "cover": "assets/218.jpg",
+    "audio": "assets/218.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "219",
+    "title": "文学的なブーバキキ",
+    "artist": "安見すや",
+    "youtubeId": "-bdEdSKr21s",
+    "cover": "assets/219.jpg",
+    "audio": "assets/219.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "220",
+    "title": "未完 / ラストソング",
+    "artist": "星のカービィ ディスカバリー + スターリーワールド",
+    "youtubeId": "rFOxnc8hlIg",
+    "cover": "assets/220.jpg",
+    "audio": "assets/220.mp3",
+    "startTime": 0,
+    "volume": 0.25
+  },
+  {
+    "id": "221",
+    "title": "ロンリーローリングスター",
+    "artist": "椛田早紀 (塊魂)",
+    "youtubeId": "pI5-LvbE4AE",
+    "cover": "assets/221.jpg",
+    "audio": "assets/221.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "222",
+    "title": "KICK BACK",
+    "artist": "米津玄師",
+    "youtubeId": "M2cckDmNLMI",
+    "cover": "assets/222.jpg",
+    "audio": "assets/222.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "223",
+    "title": "ロマンスがありあまる",
+    "artist": "ゲスの極み乙女",
+    "youtubeId": "C6-AN8J385c",
+    "cover": "assets/223.jpg",
+    "audio": "assets/223.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "224",
+    "title": "ミカヅキ・ハイウェイカー",
+    "artist": "YOSI",
+    "youtubeId": "ZpyueT99038",
+    "cover": "assets/224.jpg",
+    "audio": "assets/224.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "225",
+    "title": "Rainy Dance Flooor",
+    "artist": "UNCHAIN",
+    "youtubeId": "u2gp9HMtvAc",
+    "cover": "assets/225.jpg",
+    "audio": "assets/225.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "226",
+    "title": "ギャグ",
+    "artist": "星野源",
+    "youtubeId": "1AVErqlUdpM",
+    "cover": "assets/226.jpg",
+    "audio": "assets/226.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "227",
+    "title": "Ghost Fight(sasakure.UK Remix)",
+    "artist": "sasakure.UK",
+    "youtubeId": "3m7Vz_YrSww",
+    "cover": "assets/227.jpg",
+    "audio": "assets/227.mp3",
+    "startTime": 0,
+    "volume": 0.18
+  },
+  {
+    "id": "228",
+    "title": "?",
+    "artist": "Xack",
+    "youtubeId": "60Fu5VJ2S1E",
+    "cover": "assets/228.jpg",
+    "audio": "assets/228.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "229",
+    "title": "運び屋さん",
+    "artist": "島",
+    "youtubeId": "KbcLg_kMDf8",
+    "cover": "assets/229.jpg",
+    "audio": "assets/229.mp3",
+    "startTime": 0,
+    "volume": 0.4
+  },
+  {
+    "id": "230",
+    "title": "サイキック！ぱーりーないと☆",
+    "artist": "堀裕子",
+    "youtubeId": "68idFECq5Vo",
+    "cover": "assets/230.jpg",
+    "audio": "assets/230.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "231",
+    "title": "ハイド・アンド・シーフ",
+    "artist": "ヤマギシコージ",
+    "youtubeId": "zIhPfG8EOZ0",
+    "cover": "assets/231.jpg",
+    "audio": "assets/231.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "232",
+    "title": "カゲのオバケ",
+    "artist": "カノエラナ, コッシー",
+    "youtubeId": "v5fHi3FagPg",
+    "cover": "assets/232.jpg",
+    "audio": "assets/232.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "233",
+    "title": "トウキョウ・シャンディ・ランデヴ",
+    "artist": "MAISONdes",
+    "youtubeId": "NFMmSOWPj_k",
+    "cover": "assets/233.jpg",
+    "audio": "assets/233.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "234",
+    "title": "夜な夜な夜な",
+    "artist": "倉橋ヨエコ",
+    "youtubeId": "a1OZiofv9jc",
+    "cover": "assets/234.jpg",
+    "audio": "assets/234.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "235",
+    "title": "Random",
+    "artist": "Sobrem × Silentroom",
+    "youtubeId": "cOCvghiHvFo",
+    "cover": "assets/235.jpg",
+    "audio": "assets/235.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "236",
+    "title": "お前を殺す",
+    "artist": "Local Visions",
+    "youtubeId": "lt9jWtjtQNo",
+    "cover": "assets/236.jpg",
+    "audio": "assets/236.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "237",
+    "title": "無限にホメてくれる桜乃そら先生",
+    "artist": "GYARI",
+    "youtubeId": "M20SfPdzlQ0",
+    "cover": "assets/237.jpg",
+    "audio": "assets/237.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "238",
+    "title": "Secret Pure Love",
+    "artist": "2号.",
+    "youtubeId": "BEiyIYEMqIM",
+    "cover": "assets/238.jpg",
+    "audio": "assets/238.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "239",
+    "title": "スペードのQ",
+    "artist": "永吉昴, 双海亜美, エミリー スチュアート, 北沢志保",
+    "youtubeId": "3wnYh00AoyM",
+    "cover": "assets/239.jpg",
+    "audio": "assets/239.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "240",
+    "title": "死にゆくあなたへ。廻り続く者より。",
+    "artist": "ゴウちゃんの実況チャンネル!",
+    "youtubeId": "hMheJ3DjHOA",
+    "cover": "assets/240.jpg",
+    "audio": "assets/240.mp3",
+    "startTime": 0,
+    "volume": 0.18
+  },
+  {
+    "id": "241",
+    "title": "YO-KAI Disco",
+    "artist": "安井洋介 (まもるクンは呪われてしまった！)",
+    "youtubeId": "A2ZoG_rBjBs",
+    "cover": "assets/241.jpg",
+    "audio": "assets/241.mp3",
+    "startTime": 0,
+    "volume": 0.20
+  },
+  {
+    "id": "242",
+    "title": "Hello",
+    "artist": "capsule",
+    "youtubeId": "AWRYCGefTvY",
+    "cover": "assets/242.jpg",
+    "audio": "assets/242.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "243",
+    "title": "モ°ルモ°ル",
+    "artist": "sasakure.UK",
+    "youtubeId": "3uJ4O-evw6o",
+    "cover": "assets/243.jpg",
+    "audio": "assets/243.mp3",
+    "startTime": 0,
+    "volume": 0.30
+  },
+  {
+    "id": "244",
+    "title": "L.U.V.",
+    "artist": "姫崎莉波(初星学園)",
+    "youtubeId": "CQ-pxYTwCoI",
+    "cover": "assets/244.jpg",
+    "audio": "assets/244.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "245",
+    "title": "異世界混合大舞踏会",
+    "artist": "星野源",
+    "youtubeId": "bMPuDj3kGOM",
+    "cover": "assets/245.jpg",
+    "audio": "assets/245.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "246",
+    "title": "㋰責任集合体",
+    "artist": "マサラダ",
+    "youtubeId": "c5_0NPftdlY",
+    "cover": "assets/246.jpg",
+    "audio": "assets/246.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "247",
+    "title": "BLACKMANBAAAAA",
+    "artist": "Isonosuke",
+    "youtubeId": "_CDSNhq01Ms",
+    "cover": "assets/247.jpg",
+    "audio": "assets/247.mp3",
+    "startTime": 0,
+    "volume": 0.12
+  },
+  {
+    "id": "248",
+    "title": "レッド・ソール",
+    "artist": "桐生つかさ, 三船美優, 星輝子, 藤原肇",
+    "youtubeId": "Qf5FUK-hqKU",
+    "cover": "assets/248.jpg",
+    "audio": "assets/248.mp3",
+    "startTime": 0,
+    "volume": 0.35
+  },
+  {
+    "id": "249",
+    "title": "Marine Paradise",
+    "artist": "Mr.Asyu",
+    "youtubeId": "V2oKeN3plRs",
+    "cover": "assets/249.jpg",
+    "audio": "assets/249.mp3",
+    "startTime": 0,
+    "volume": 0.2
+  },
+  {
+    "id": "250",
+    "title": "INTERNET WRITING MAN!!",
+    "artist": "雨穴",
+    "youtubeId": "fpuuMaNwy8s",
+    "cover": "assets/250.jpg",
+    "audio": "assets/250.mp3",
+    "startTime": 0,
+    "volume": 0.3
+  },
+  {
+    "id": "251",
+    "title": "トゥイー・ボックスの人形劇場",
+    "artist": "sasakure.UK",
+    "youtubeId": "_-fgbICIu7w",
+    "cover": "assets/251.jpg",
+    "audio": "assets/251.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "252",
+    "title": "il vento d'oro",
+    "artist": "菅野祐悟",
+    "youtubeId": "U0TXIXTzJEY",
+    "cover": "assets/252.jpg",
+    "audio": "assets/252.mp3",
+    "startTime": 0,
+    "volume": 0.18
+  },
+  {
+    "id": "253",
+    "title": "ひまわりマークをさがせ！",
+    "artist": "龍崎薫",
+    "youtubeId": "L96DGEax3so",
+    "cover": "assets/253.jpg",
+    "audio": "assets/253.mp3",
+    "startTime": 0,
+    "volume": 0.5
+  },
+  {
+    "id": "254",
+    "title": "(2月の駅の歌)",
+    "artist": "x0o0x",
+    "youtubeId": "UxM5UgpXYM4",
+    "cover": "assets/254.jpg",
+    "audio": "assets/254.mp3",
+    "startTime": 0,
+    "volume": 0.15
+  },
+  {
+    "id": "255",
+    "title": "Virtual Insanity",
+    "artist": "Jamiroquai",
+    "youtubeId": "4JkIs37a2JE",
+    "cover": "assets/255.jpg",
+    "audio": "assets/255.mp3",
+    "startTime": 0,
+    "volume": 0.35
+  },
+  {
+    "id": "256",
+    "title": "星をつなげて",
+    "artist": "Gothic×Luck",
+    "youtubeId": "cVPERtPy-kM",
+    "cover": "assets/256.jpg",
+    "audio": "assets/256.mp3",
+    "startTime": 0,
+    "volume": 0.15
   }
 ]
